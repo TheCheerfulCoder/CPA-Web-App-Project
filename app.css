@@ -1,4 +1,4 @@
-/* border: 1px solid black; */
+/* border: 1px solid green; */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 :root {
@@ -11,6 +11,7 @@
     margin: 0;
     padding: 0;
     color: #008000;
+    /* color: white; */
     font-family: 'Press Start 2P', cursive;
 }
 
@@ -20,6 +21,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
 }
 
 .flex-column {
@@ -36,7 +38,24 @@
     text-decoration: none;
 }
 
+    .button:hover {
+        cursor: pointer;
+        transform: translateY(-0.15rem);
+        transition: transform 150ms;
+    }
+
+
 h1 {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.05rem;
     text-align: center;
+    line-height: 3.5rem;
 }
+
+h2 {
+    margin-bottom: 1.5rem;
+}
+
+p {
+    line-height: 2rem;
+}
+
