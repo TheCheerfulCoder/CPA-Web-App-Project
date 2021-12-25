@@ -1,0 +1,17 @@
+table {
+    margin-top: 2rem;
+    width: 100vw
+}
+
+table, th, td {
+    border: .25px solid green;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+}
+
+caption {
+    padding-bottom: 1rem;
+}

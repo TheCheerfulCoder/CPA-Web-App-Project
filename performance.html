@@ -4,8 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Performance Dashboard</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="performance.css">
 </head>
 <body>
-    
+    <div class="title">
+        <h1>My Skill Level: Padwan</h1>
+    </div>
+
+    <div class="lineChart">
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+
+    <div class="table">
+        <table>
+            <caption>Missed Questions</caption>
+            <tr>
+                <th>Question ID</th>
+                <th>Number of Times Missed</th>
+                <th>Question</th>
+            </tr>
+            <tr>
+                <td>00021</td>
+                <td>5</td>
+                <td>What happens when...</td>
+            </tr>
+            <tr>
+                <td>00036</td>
+                <td>2</td>
+                <td>When a user of a system...</td>
+            </tr>
+            <tr>
+                <td>00034</td>
+                <td>1</td>
+                <td>If you were a...</td>
+            </tr>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="performance.js"></script>
 </body>
 </html>
