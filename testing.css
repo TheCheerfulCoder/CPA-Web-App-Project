@@ -18,11 +18,12 @@
 .explanation p{
     /* border: 1px solid green; */
     padding: .75rem;
-
-
 }
+
+
 
 .explanation {
     border: 1px solid green;
     background-color: rgba(255, 255, 255, 0.055);
+    visibility: hidden;
 }

@@ -14,10 +14,12 @@ const myChart = new Chart(ctx, {
             borderColor: [
                 'rgb(00, 80, 00)',
             ],
-            borderWidth: 1
+            borderWidth: 1,
+            
         }]
     },
     options: {
+        maintainAspectRatio: false,
         scales: {
             y: {
                 beginAtZero: true
