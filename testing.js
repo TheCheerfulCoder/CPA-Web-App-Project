@@ -34,7 +34,7 @@ startTest = () => {
  
 
 getNewQuestion = () => {
-    // Remove the green/red styling from the previous question's answer
+    // Remove any green/red styling from the previous question's answer
     const answerStylingIncorrect = [...document.getElementsByClassName('incorrect')]
     
     answerStylingIncorrect.forEach(answerStylingIncorrect => {
@@ -46,6 +46,9 @@ getNewQuestion = () => {
     answerStylingCorrect.forEach(answerStylingCorrect => {
         answerStylingCorrect.classList.remove('correct')
     })
+
+    // Hide any explanation stylings from the previous question.
+    document.getElementById('explanation').style.visibility = "hidden";
 
     // Update the question counter (e.g. 1/3 --> 2/3)
     questionCounter++;
@@ -76,7 +79,8 @@ getNewQuestion = () => {
         choice.innerText = currentQuestion['choice' + number]
     })
 
-    // TODO: Fill in the explanation
+    // Fill in the explanation
+    explanation.innerText = currentQuestion.explanation
 
     // Remove the question from the list of available questions
     availableQuestions.splice(questionIndex, 1);
@@ -87,7 +91,6 @@ getNewQuestion = () => {
 
 choices.forEach( choice => {
     choice.addEventListener("click", e => {
-        
         // Prevent the user from selecting more than one answer
         if (!acceptingAnswers) return;
         acceptingAnswers = false;
@@ -108,7 +111,6 @@ choices.forEach( choice => {
 
         // Do not allow the user to select answers if they have already answered
         acceptingAnswers = false;
-
     })
 })
 
@@ -119,7 +121,12 @@ nextQuestionButton.onclick = getNewQuestion
 /* -------------------- "SHOW ANSWER" BUTTON FUNCTIONALITY -------------------- */
 // Create a function to show the answer when the "SHOW ANSWER" button is clicked
 function showAnswer () {
+    // Make the explanation visable
     document.getElementById('explanation').style.visibility = "visible";
+
+    // Add green highlighting to the correct answer
+    correctChoice = document.getElementById('choice' + String(currentQuestion.answer))
+    correctChoice.classList.add('correct')
 };
 
 // When the "SHOW ANSWER" is clicked, show the answer.

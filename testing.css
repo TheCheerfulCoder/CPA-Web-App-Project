@@ -24,12 +24,13 @@
     border: 1px solid green;
     background-color: rgba(255, 255, 255, 0.055);
     visibility: hidden;
+    padding: 1rem;
 }
 
 .correct{
-    background-color: #28a745;
+    background-color: #28a7462a;
 }
 
 .incorrect {
-    background-color: #dc3545;
+    background-color: #dc35463b;
 }
