@@ -12,7 +12,7 @@
         <div id="game" class="flex-column">
             <div id="hud">
                 <div id="hud-item">
-                    <div id="ProgressText">
+                    <div id="progressText">
                         <p>Question: 1/10</p> 
                     </div>
                 </div>
@@ -20,27 +20,27 @@
                     <div id="timer">
                         <p>Time: 00:00:32</p> 
                     </div>
-                </div>
+                </div> 
             </div>
-            <h2>This is the question, right?</h2>
-            <div class="choice-container button">
+            <h2 id="question">This is the question, right?</h2>
+            <div id="choice" class="choice-container button">
                 <p class="choice-text" data-number="1">a. No, this is not the question</p>
             </div>
-            <div class="choice-container  button">
-                <p class="choice-text" data-number="1">b. Yes, this is the question</p>
+            <div id="choice" class="choice-container  button">
+                <p class="choice-text" data-number="2">b. Yes, this is the question</p>
             </div>
-            <div class="choice-container  button">
-                <p class="choice-text" data-number="1">c. No, this is a trick question</p>
+            <div id="choice" class="choice-container  button">
+                <p class="choice-text" data-number="3">c. No, this is a trick question</p>
             </div>
-            <div class="choice-container  button">
-                <p class="choice-text" data-number="1">d. I do not know what you are talking about. This is a really dumb question. Because of this, I am going to select this answer as the right one.</p>
+            <div id="choice" class="choice-container  button">
+                <p class="choice-text" data-number="4">d. I do not know what you are talking about. This is a really dumb question. Because of this, I am going to select this answer as the right one.</p>
             </div>
             <div class="testing-options">
                 <div id="show-answer" class="button">
                     <p>SHOW ANSWER</p> 
                 </div>
                 <div id="next-question" class="button">
-                    <p>NEXT QUESTION</p> 
+                    <p id="next-question-text">NEXT QUESTION</p> 
                 </div>
             </div>
             <div class="explanation" id="explanation">

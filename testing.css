@@ -20,10 +20,16 @@
     padding: .75rem;
 }
 
-
-
 .explanation {
     border: 1px solid green;
     background-color: rgba(255, 255, 255, 0.055);
     visibility: hidden;
+}
+
+.correct{
+    background-color: #28a745;
+}
+
+.incorrect {
+    background-color: #dc3545;
 }
