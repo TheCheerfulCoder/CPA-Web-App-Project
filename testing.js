@@ -10,6 +10,9 @@ let availableQuestions = [];
 
 const MAX_QUESTIONS = 3;
 
+// Initialize or fetch the "testScores" object that holds all test score data
+let testScores = {};
+
 // Fetch the questions from the "questions.json" file and store them in "questions"
 fetch("questions.json")
     .then( res => {
@@ -29,6 +32,7 @@ fetch("questions.json")
 startTest = () => {
     questionCounter = 0;
     availableQuestions = [...questions];
+    scoreList = [];
     getNewQuestion();
 };
  
@@ -68,6 +72,8 @@ getNewQuestion = () => {
         }
     }
 
+
+
     // Fill in the question
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
@@ -89,6 +95,8 @@ getNewQuestion = () => {
     acceptingAnswers = true;
 };
 
+
+
 choices.forEach( choice => {
     choice.addEventListener("click", e => {
         // Prevent the user from selecting more than one answer
@@ -109,6 +117,47 @@ choices.forEach( choice => {
         // Change the class element in the HTML for the parent element
         selectedChoice.parentElement.classList.add(classToApply)
 
+        /* Append the user's results to the "scoreList": "0" if incorrect and "1" 
+           if correct */
+        if (classToApply === 'correct') {
+            scoreList.push(1)
+        } else {
+            scoreList.push(0)
+        }
+
+        // Store the "scoreList" in local storage object after the test is complete
+        if (questionCounter === MAX_QUESTIONS) {
+            if (localStorage.getItem('testScores') !== null) {
+                /* Append the data from the most recent test into the "testScores" object
+                in local storage */
+                //   STEP 1: Deserialize the existing testScores object from local storage
+                let testScoresDeserialized = JSON.parse(localStorage.getItem("testScores"));
+
+                //   STEP 2: Determine the current test number 
+                testScoresKeys = Object.keys(testScoresDeserialized);
+
+                lastKey = testScoresKeys.pop();
+                
+                lastTestNumber = lastKey.replace('Test ', '');
+
+                currentTestNumber = parseInt(lastTestNumber) + 1;
+
+                //   STEP 3: Append the recent test score data to the deserialized object
+                testScoresDeserialized['Test ' + currentTestNumber.toString()] = scoreList;
+                
+                //   STEP 4: Re-serialize the object and put it back into local storage
+                let testScoresSerialized = JSON.stringify(testScoresDeserialized);
+                localStorage.setItem("testScores", testScoresSerialized);
+
+            } else {
+                // Add a key value pair to the "testScores" object (e.g. {test 1: [0, 1, 0]})
+                testScores['Test 1'] = scoreList;
+
+                // Add testScores to local storage
+                let testScoresSerialized = JSON.stringify(testScores);
+                localStorage.setItem('testScores', testScoresSerialized);
+            }
+        }
         // Do not allow the user to select answers if they have already answered
         acceptingAnswers = false;
     })
