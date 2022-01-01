@@ -68,7 +68,7 @@ getNewQuestion = () => {
         // Change the button's action
         const viewMyPerformance = document.getElementById("next-question")
         viewMyPerformance.onclick = function RedirectToPerformance() {
-            window.location.href="performance.html";
+            window.location.href="/CPA-Web-App-Project/performance.html";
         }
     }
 
