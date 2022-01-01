@@ -1,13 +1,35 @@
 const ctx = document.getElementById('myChart');
 
 
+
+/* CREATE THE LINE CHART */
+// Get the object from local storage
+let testScoresDeserialized = JSON.parse(localStorage.getItem("testScores"));
+// Get the keys from the object
+testScoresKeys = Object.keys(testScoresDeserialized);
+// Get the last 6 keys
+let recentTests = testScoresKeys.slice(-6);
+
+const recentTestScores = [];
+
+for (var i = 0; i < 6; i++) {
+    const singleTestData = testScoresDeserialized[recentTests[i]];
+    const numberCorrect = singleTestData.filter(function(x) {
+        return x !== 0;
+    }); 
+    let testScore = Math.round(100 * (numberCorrect.length / singleTestData.length))
+    recentTestScores.push(testScore)
+}
+
+console.log(recentTestScores)
+
 const myChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: ['Test 1', 'Test 2', 'Test 3', 'Test 4', 'Test 5', 'Test 6'],
+        labels: recentTests,
         datasets: [{
             label: '% Score',
-            data: [25, 55, 45, 42, 52, 34, 50],
+            data: recentTestScores,
             backgroundColor: [
                 'rgb(00, 80, 00)', 
             ],
@@ -30,3 +52,4 @@ const myChart = new Chart(ctx, {
 });
 
 
+// CREATE THE TABLE

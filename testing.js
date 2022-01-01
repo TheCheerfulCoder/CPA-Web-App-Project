@@ -72,8 +72,6 @@ getNewQuestion = () => {
         }
     }
 
-
-
     // Fill in the question
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
@@ -116,6 +114,15 @@ choices.forEach( choice => {
 
         // Change the class element in the HTML for the parent element
         selectedChoice.parentElement.classList.add(classToApply)
+
+        // Store whether the user got the question right or wrong in local storage
+        if (localStorage.getItem(currentQuestion.questionID) !== null) {
+            let questionHistory = localStorage.getItem(currentQuestion.questionID)
+            updatedQuestionHistory = questionHistory + ", " + classToApply
+            localStorage.setItem(currentQuestion.questionID, updatedQuestionHistory)
+        } else {
+            localStorage.setItem(currentQuestion.questionID, classToApply)
+        }
 
         /* Append the user's results to the "scoreList": "0" if incorrect and "1" 
            if correct */

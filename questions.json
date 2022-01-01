@@ -1,5 +1,6 @@
 [
     {
+      "questionID": "00001",
       "question": "Inside which HTML element do we put the JavaScript??",
       "choice1": "<script>",
       "choice2": "<javascript>",
@@ -9,6 +10,7 @@
       "explanation": "JavaScript is linked to HTML with the <script> tag." 
     },
     {
+      "questionID": "00002",
       "question": "What is the correct syntax for referring to an external script called 'xxx.js'?",
       "choice1": "<script href='xxx.js'>",
       "choice2": "<script name='xxx.js'>",
@@ -18,6 +20,7 @@
       "explanation": "<script src='xxx.js'> is the correct syntax." 
     },
     {
+      "questionID": "00003",
       "question": " How do you write 'Hello World' in an alert box?",
       "choice1": "msgBox('Hello World');",
       "choice2": "alertBox('Hello World');",
