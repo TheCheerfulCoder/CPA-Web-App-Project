@@ -68,7 +68,7 @@ getNewQuestion = () => {
         // Change the button's action
         const viewMyPerformance = document.getElementById("next-question")
         viewMyPerformance.onclick = function RedirectToPerformance() {
-            window.location.href="/CPA-Web-App-Project/performance.html";
+            window.location.href="performance.html";
         }
     }
 
@@ -116,13 +116,15 @@ choices.forEach( choice => {
         selectedChoice.parentElement.classList.add(classToApply)
 
         // Store whether the user got the question right or wrong in local storage
-        if (localStorage.getItem(currentQuestion.questionID) !== null) {
-            let questionHistory = localStorage.getItem(currentQuestion.questionID)
-            updatedQuestionHistory = questionHistory + ", " + classToApply
-            localStorage.setItem(currentQuestion.questionID, updatedQuestionHistory)
-        } else {
-            localStorage.setItem(currentQuestion.questionID, classToApply)
-        }
+        if (classToApply === 'incorrect') {
+            if (localStorage.getItem('missedQuestions') !== null) {
+                let missedQuestionsDeserialized = JSON.parse(localStorage.getItem('missedQuestions'));
+                missedQuestionsDeserialized.push(currentQuestion.questionID);
+                localStorage.setItem('missedQuestions', JSON.stringify(missedQuestionsDeserialized));
+            } else {
+                localStorage.setItem('missedQuestions', '["' + currentQuestion.questionID.toString() + '"]');
+            }
+        };
 
         /* Append the user's results to the "scoreList": "0" if incorrect and "1" 
            if correct */
