@@ -21,8 +21,6 @@ for (var i = 0; i < 6; i++) {
     recentTestScores.push(testScore)
 }
 
-console.log(recentTestScores)
-
 const myChart = new Chart(ctx, {
     type: 'line',
     data: {
@@ -51,5 +49,29 @@ const myChart = new Chart(ctx, {
     }
 });
 
+/* CREATE THE TABLE */
+// Get the array of missed questions from local storage
+let missedQuestions = JSON.parse(localStorage.getItem('missedQuestions'));
 
-// CREATE THE TABLE
+// Fetch the data from questions.json
+fetch("questions.json")
+    .then(function(resp) {
+        return resp.json();
+    })
+    .then(function(data){
+        loadedQuestions = data;
+    });
+
+/* Build a JavaScript Object for the table's data: I think key-value pairs
+should work well with this. The key will be the Question ID and the value 
+will be an array that contains the number of times the object was missed and 
+the first ten or so letters with ellipsis. 
+
+STEP 1: Get a count for each Question ID in the "missedQuestions" variable;
+store this in a key value pair with the Question ID as the key and the count
+as the value.
+
+STEP 2: Append the starting text of the question to the data structure from
+above.*/
+
+// Update the DOM to present the data: 
