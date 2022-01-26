@@ -49,9 +49,6 @@ const myChart = new Chart(ctx, {
     }
 });
 
-/* CREATE THE TABLE */
-// Get the array of missed questions from local storage
-let missedQuestions = JSON.parse(localStorage.getItem('missedQuestions'));
 
 // Fetch the data from questions.json
 fetch("questions.json")
@@ -64,6 +61,47 @@ fetch("questions.json")
     });
 
 displayMissedQuestions = () => {
+    // Get the array of missed questions from local storage
+    let missedQuestions = JSON.parse(localStorage.getItem('missedQuestions'));
+    
+    // Create an object that contains all the missed questions and their frequency
+    // Example: {00001: 3, 00003: 5, 00002: 6}
+    const missedQuestionsObject = {};
+    for (const num of missedQuestions) {
+        missedQuestionsObject[num] = missedQuestionsObject[num] ? missedQuestionsObject[num] + 1 : 1;
+    }
+
+    // Turn the "missedQuestionsObject" into a multidemensional array
+    // Example: [['00002', 6], ['00003', 5], ['00001', 3]]
+    const missedQuestionsArray = Object.entries(missedQuestionsObject)
+
+    /* NOTE: The following step may not be necessary. I just don't know if the
+             Object.entries() method above sorts in descending order. */
+
+    // Sort the multidemensional array in descending order based on frequency
+    missedQuestionsArray.sort(function (a, b) {
+        return b[1] - a[1];
+    });
+
+    // Update the DOM to present the data (First row for now)
+    let tableRef = document.getElementById("missed-questions-table");
+
+    let newRow = tableRef.insertRow(-1);
+
+    let newCell = newRow.insertCell(0);
+    let newText = document.createTextNode(loadedQuestions[Number(missedQuestionsArray[0][0])].question.substring(0, 20) + '...'); 
+    newCell.appendChild(newText);
+
+    let newCell1 = newRow.insertCell(0);
+    let newText1 = document.createTextNode(missedQuestionsArray[0][1]);
+    newCell1.appendChild(newText1);
+
+    let newCell2 = newRow.insertCell(0);
+    let newText2 = document.createTextNode(missedQuestionsArray[0][0]);
+    newCell2.appendChild(newText2);
+
+
+
 }
 
 
@@ -76,26 +114,14 @@ STEP 1: Get a count for each Question ID in the "missedQuestions" variable;
 store this in a key value pair with the Question ID as the key and the count
 as the value.*/
 
-// Create an object that contains all the missed questions and their frequency.
-const missedQuestionsObject = {};
-for (const num of missedQuestions) {
-    missedQuestionsObject[num] = missedQuestionsObject[num] ? missedQuestionsObject[num] + 1 : 1;
-}
-console.log(missedQuestionsObject)
 
-// Turn that object into a multidemensional array.
-const missedQuestionsArray = Object.entries(missedQuestionsObject)
-console.log(missedQuestionsArray)
 
-/* NOTE: The following step may not be necessary. I just don't know if the
-   Object.entries() method sorts in descending order. */
-// Sort the multidemensional array in descending order based on frequency.
-missedQuestionsArray.sort(function (a, b) {
-    return b[1] - a[1];
-});
-console.log(missedQuestionsArray)
 
-/* STEP 2: Append the starting text of the question to the data structure from
-above.*/
 
-// Update the DOM to present the data: 
+
+
+
+
+
+
+
