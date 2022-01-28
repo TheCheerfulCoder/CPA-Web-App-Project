@@ -21,11 +21,21 @@
     },
     {
       "questionID": "00002",
-      "question": " How do you write 'Hello World' in an alert box?",
+      "question": "How do you write 'Hello World' in an alert box?",
       "choice1": "msgBox('Hello World');",
       "choice2": "alertBox('Hello World');",
       "choice3": "msg('Hello World');",
       "choice4": "alert('Hello World');",
+      "answer": 4,
+      "explanation": "alert('Hello World'); is how you write 'hello world' in an alert box." 
+    },
+    {
+      "questionID": "00003",
+      "question": "Who is batman?",
+      "choice1": "James Gordon",
+      "choice2": "Bruce Wayne",
+      "choice3": "Bruce Lee",
+      "choice4": "Chuck Norris",
       "answer": 4,
       "explanation": "alert('Hello World'); is how you write 'hello world' in an alert box." 
     }

@@ -84,23 +84,30 @@ displayMissedQuestions = () => {
     });
 
     // Update the DOM to present the data (First row for now)
+    
+    // Get a reference to the table
     let tableRef = document.getElementById("missed-questions-table");
 
-    let newRow = tableRef.insertRow(-1);
+    // Fills out the "Missed Questions" table
+    for (row = 0; row < missedQuestionsArray.length; row++) {
+        // Insert a new row at the bottom of the table
+        let newRow = tableRef.insertRow(-1);
 
-    let newCell = newRow.insertCell(0);
-    let newText = document.createTextNode(loadedQuestions[Number(missedQuestionsArray[0][0])].question.substring(0, 20) + '...'); 
-    newCell.appendChild(newText);
+        // Insert the value into the "Question" column's cell
+        let newCell = newRow.insertCell(0);
+        let newText = document.createTextNode(loadedQuestions[Number(missedQuestionsArray[row][0])].question.substring(0, 20) + '...'); 
+        newCell.appendChild(newText);
 
-    let newCell1 = newRow.insertCell(0);
-    let newText1 = document.createTextNode(missedQuestionsArray[0][1]);
-    newCell1.appendChild(newText1);
+        // Insert the value into the "Number of Ties Missed" column's cell
+        let newCell1 = newRow.insertCell(0);
+        let newText1 = document.createTextNode(missedQuestionsArray[row][1]);
+        newCell1.appendChild(newText1);
 
-    let newCell2 = newRow.insertCell(0);
-    let newText2 = document.createTextNode(missedQuestionsArray[0][0]);
-    newCell2.appendChild(newText2);
-
-
+        // Insert the value into the "Question ID" column's cell
+        let newCell2 = newRow.insertCell(0);
+        let newText2 = document.createTextNode(missedQuestionsArray[row][0]);
+        newCell2.appendChild(newText2);
+    }
 
 }
 
