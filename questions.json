@@ -36,7 +36,7 @@
       "choice2": "Bruce Wayne",
       "choice3": "Bruce Lee",
       "choice4": "Chuck Norris",
-      "answer": 4,
+      "answer": 2,
       "explanation": "alert('Hello World'); is how you write 'hello world' in an alert box." 
     }
   ]

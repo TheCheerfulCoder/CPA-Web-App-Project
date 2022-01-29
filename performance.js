@@ -10,7 +10,7 @@ testScoresKeys = Object.keys(testScoresDeserialized);
 // Get the last 6 keys
 let recentTests = testScoresKeys.slice(-6);
 
-const recentTestScores = [];
+var recentTestScores = [];
 
 for (var i = 0; i < 6; i++) {
     const singleTestData = testScoresDeserialized[recentTests[i]];
@@ -82,8 +82,6 @@ displayMissedQuestions = () => {
     missedQuestionsArray.sort(function (a, b) {
         return b[1] - a[1];
     });
-
-    // Update the DOM to present the data (First row for now)
     
     // Get a reference to the table
     let tableRef = document.getElementById("missed-questions-table");
@@ -109,18 +107,7 @@ displayMissedQuestions = () => {
         newCell2.appendChild(newText2);
     }
 
-}
-
-
-/* Build a JavaScript Object for the table's data: I think key-value pairs
-should work well with this. The key will be the Question ID and the value 
-will be an array that contains the number of times the object was missed and 
-the first ten or so letters with ellipsis. 
-
-STEP 1: Get a count for each Question ID in the "missedQuestions" variable;
-store this in a key value pair with the Question ID as the key and the count
-as the value.*/
-
+};
 
 
 
