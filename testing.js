@@ -7,6 +7,7 @@ const showAnswerButton = document.getElementById('show-answer');
 const nextQuestionButton = document.getElementById('next-question');
 
 let availableQuestions = [];
+let acceptingAnswers = true;
 
 const MAX_QUESTIONS = 3;
 
@@ -172,20 +173,22 @@ choices.forEach( choice => {
     })
 })
 
-
-/* -------------------- "NEXT QUESTION" BUTTON FUNCTIONALITY -------------------- */
-nextQuestionButton.onclick = getNewQuestion
-
-/* -------------------- "SHOW ANSWER" BUTTON FUNCTIONALITY -------------------- */
-// Create a function to show the answer when the "SHOW ANSWER" button is clicked
 function showAnswer () {
-    // Make the explanation visable
-    document.getElementById('explanation').style.visibility = "visible";
+    // Disable the "SHOW ANSWER" button if the user has not selected an answer.
+    if (acceptingAnswers) {
+        return;
+    }
 
-    // Add green highlighting to the correct answer
-    correctChoice = document.getElementById('choice' + String(currentQuestion.answer))
-    correctChoice.classList.add('correct')
+    // Make the answer explanation visable.
+    document.getElementById('explanation').style.visibility = "visible";
+    
+    // Add green highlighting to the correct answer.
+    correctChoice = document.getElementById(
+        'choice' + String(currentQuestion.answer)
+        )
+    correctChoice.classList.add('correct')  
 };
 
-// When the "SHOW ANSWER" is clicked, show the answer.
-showAnswerButton.onclick = showAnswer
+
+nextQuestionButton.onclick = getNewQuestion
+showAnswerButton.onclick = showAnswer;
