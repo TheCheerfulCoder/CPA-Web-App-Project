@@ -1,25 +1,24 @@
 const ctx = document.getElementById('myChart');
 
+// Get key names of the most recent six tests.
+let testDataDeserialized = JSON.parse(localStorage.getItem("testScores"));
+let testDataKeys = Object.keys(testDataDeserialized);
+let recentTests = testDataKeys.slice(-6);
 
-
-/* CREATE THE LINE CHART */
-// Get the object from local storage
-let testScoresDeserialized = JSON.parse(localStorage.getItem("testScores"));
-// Get the keys from the object
-testScoresKeys = Object.keys(testScoresDeserialized);
-// Get the last 6 keys
-let recentTests = testScoresKeys.slice(-6);
-
+// Get the test scores for the most recent six tests.
 var recentTestScores = [];
+for (var i = Object.keys(testDataDeserialized).length - 1; i >= 0; i--) {
+    const singleTestData = testDataDeserialized[testDataKeys[i]];
 
-for (var i = 0; i < 6; i++) {
-    const singleTestData = testScoresDeserialized[recentTests[i]];
-    const numberCorrect = singleTestData.filter(function(x) {
-        return x !== 0;
-    }); 
-    let testScore = Math.round(100 * (numberCorrect.length / singleTestData.length))
-    recentTestScores.push(testScore)
+    const numberCorrect = singleTestData.filter(data => data !== 0);
+    let testScore = Math.round(
+        100 * (numberCorrect.length / singleTestData.length)
+    );
+    
+    recentTestScores.unshift(testScore);
 }
+
+console.log(recentTestScores)
 
 const myChart = new Chart(ctx, {
     type: 'line',
@@ -27,7 +26,7 @@ const myChart = new Chart(ctx, {
         labels: recentTests,
         datasets: [{
             label: '% Score',
-            data: recentTestScores,
+            data: recentTestScores.slice(-6),
             backgroundColor: [
                 'rgb(00, 80, 00)', 
             ],

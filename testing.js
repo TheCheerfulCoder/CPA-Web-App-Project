@@ -185,10 +185,9 @@ function showAnswer () {
     // Add green highlighting to the correct answer.
     correctChoice = document.getElementById(
         'choice' + String(currentQuestion.answer)
-        )
-    correctChoice.classList.add('correct')  
-};
-
+        );
+    correctChoice.classList.add('correct');  
+}
 
 nextQuestionButton.onclick = getNewQuestion
 showAnswerButton.onclick = showAnswer;
