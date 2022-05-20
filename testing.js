@@ -9,7 +9,7 @@ const nextQuestionButton = document.getElementById('next-question');
 let availableQuestions = [];
 let acceptingAnswers = true;
 
-const MAX_QUESTIONS = 3;
+const MAX_QUESTIONS = parseInt(localStorage.getItem("testLength"));
 
 // Initialize or fetch the "testScores" object that holds all test score data
 let testScores = {};
