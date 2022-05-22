@@ -9,7 +9,7 @@ const nextQuestionButton = document.getElementById('next-question');
 let availableQuestions = [];
 let acceptingAnswers = true;
 
-const MAX_QUESTIONS = parseInt(localStorage.getItem("testLength"));
+const MAX_QUESTIONS = 1;
 
 // Initialize or fetch the "testScores" object that holds all test score data
 let testScores = {};
@@ -74,8 +74,8 @@ getNewQuestion = () => {
     }
 
     // Fill in the question
-    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
-    console.log(questionIndex);
+    const studyQuestionID = localStorage.getItem('studyQuestionID');
+    const questionIndex = parseInt(studyQuestionID, 10);
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
 
@@ -117,58 +117,6 @@ choices.forEach( choice => {
         // Change the class element in the HTML for the parent element
         selectedChoice.parentElement.classList.add(classToApply)
 
-        // Store whether the user got the question right or wrong in local storage
-        if (classToApply === 'incorrect') {
-            if (localStorage.getItem('missedQuestions') !== null) {
-                let missedQuestionsDeserialized = JSON.parse(localStorage.getItem('missedQuestions'));
-                missedQuestionsDeserialized.push(currentQuestion.questionID);
-                localStorage.setItem('missedQuestions', JSON.stringify(missedQuestionsDeserialized));
-            } else {
-                localStorage.setItem('missedQuestions', '["' + currentQuestion.questionID.toString() + '"]');
-            }
-        };
-
-        /* Append the user's results to the "scoreList": "0" if incorrect and "1" 
-           if correct */
-        if (classToApply === 'correct') {
-            scoreList.push(1)
-        } else {
-            scoreList.push(0)
-        }
-
-        // Store the "scoreList" in local storage object after the test is complete
-        if (questionCounter === MAX_QUESTIONS) {
-            if (localStorage.getItem('testScores') !== null) {
-                /* Append the data from the most recent test into the "testScores" object
-                in local storage */
-                //   STEP 1: Deserialize the existing testScores object from local storage
-                let testScoresDeserialized = JSON.parse(localStorage.getItem("testScores"));
-
-                //   STEP 2: Determine the current test number 
-                testScoresKeys = Object.keys(testScoresDeserialized);
-
-                lastKey = testScoresKeys.pop();
-                
-                lastTestNumber = lastKey.replace('Test ', '');
-
-                currentTestNumber = parseInt(lastTestNumber) + 1;
-
-                //   STEP 3: Append the recent test score data to the deserialized object
-                testScoresDeserialized['Test ' + currentTestNumber.toString()] = scoreList;
-                
-                //   STEP 4: Re-serialize the object and put it back into local storage
-                let testScoresSerialized = JSON.stringify(testScoresDeserialized);
-                localStorage.setItem("testScores", testScoresSerialized);
-
-            } else {
-                // Add a key value pair to the "testScores" object (e.g. {test 1: [0, 1, 0]})
-                testScores['Test 1'] = scoreList;
-
-                // Add testScores to local storage
-                let testScoresSerialized = JSON.stringify(testScores);
-                localStorage.setItem('testScores', testScoresSerialized);
-            }
-        }
         // Do not allow the user to select answers if they have already answered
         acceptingAnswers = false;
     })

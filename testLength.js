@@ -1,8 +1,11 @@
 const goToTesting = (num) => {
+    /* Store the number of quesitons selected by the user in local storage; 
+    then send the user to the testing page.*/
     localStorage.setItem("testLength", String(num));
     window.location.href="testing.html";
 }
 
+// Add an event listner for each option the user can select.
 document.getElementById("choice1").addEventListener("click", () => {
     goToTesting(1);
 });
@@ -14,7 +17,3 @@ document.getElementById("choice2").addEventListener("click", () => {
 document.getElementById("choice3").addEventListener("click", () => {
     goToTesting(3);
 });
-
-// TODO: Change the testing.js file to query local storage in order to get the
-// number of questions.
-console.log(parseInt(localStorage.getItem("testLength")));

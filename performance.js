@@ -1,5 +1,10 @@
 const ctx = document.getElementById('myChart');
 
+const viewMissedQuestion = (questionID) => {
+    localStorage.setItem('studyQuestionID', questionID);
+    window.location.href='viewMissedMcq.html';
+}
+
 // Get key names of the most recent six tests.
 let testDataDeserialized = JSON.parse(localStorage.getItem("testScores"));
 let testDataKeys = Object.keys(testDataDeserialized);
@@ -17,8 +22,6 @@ for (var i = Object.keys(testDataDeserialized).length - 1; i >= 0; i--) {
     
     recentTestScores.unshift(testScore);
 }
-
-console.log(recentTestScores)
 
 const myChart = new Chart(ctx, {
     type: 'line',
@@ -85,10 +88,18 @@ displayMissedQuestions = () => {
     // Get a reference to the table
     let tableRef = document.getElementById("missed-questions-table");
 
-    // Fills out the "Missed Questions" table
+    // Fill out the "Missed Questions" table
     for (row = 0; row < missedQuestionsArray.length; row++) {
         // Insert a new row at the bottom of the table
         let newRow = tableRef.insertRow(-1);
+        newRow.id = missedQuestionsArray[row][0];
+        document.getElementById(
+            missedQuestionsArray[row][0]
+            ).addEventListener(
+                'click', viewMissedQuestion.bind(
+                    null,missedQuestionsArray[row][0]
+                    )
+                );
 
         // Insert the value into the "Question" column's cell
         let newCell = newRow.insertCell(0);
@@ -107,12 +118,6 @@ displayMissedQuestions = () => {
     }
 
 };
-
-
-
-
-
-
 
 
 
