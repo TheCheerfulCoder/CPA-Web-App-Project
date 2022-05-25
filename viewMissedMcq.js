@@ -140,3 +140,19 @@ function showAnswer () {
 
 nextQuestionButton.onclick = getNewQuestion
 showAnswerButton.onclick = showAnswer;
+
+const modal = document.getElementById('modal')
+const backDrop = document.getElementById('backdrop')
+const revealModalButton = document.getElementById('show-answer')
+
+const toggleModal = () => {
+    if (acceptingAnswers) {
+        modal.classList.toggle('visible');
+        backDrop.classList.toggle('visible');
+    } else {
+        return;
+    }
+};
+
+revealModalButton.addEventListener('click', toggleModal);
+backDrop.addEventListener('click', toggleModal);
