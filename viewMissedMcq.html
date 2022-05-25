@@ -6,14 +6,29 @@
     <title>Study Missed Question</title>
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="testing.css">
+    <link rel="stylesheet" href="loader.css">
+    <script src="loader.js"></script>
 </head>
 <body>
+    <div class="loader-wrapper">
+        <div class="loader">
+            <span class="loader-block"></span>
+            <span class="loader-block"></span>
+            <span class="loader-block"></span>
+            <span class="loader-block"></span>
+            <span class="loader-block"></span>
+            <span class="loader-block"></span>
+            <span class="loader-block"></span>
+            <span class="loader-block"></span>
+            <span class="loader-block"></span>
+        </div>
+    </div>
     <div class="container">
         <div id="game" class="flex-column">
             <div id="hud">
                 <div id="hud-item">
                     <div id="progressText">
-                        <p>Question: 1/10</p> 
+                        <p></p> 
                     </div>
                 </div>
                 <div id="hud-item">
@@ -22,18 +37,18 @@
                     </div>
                 </div> 
             </div>
-            <h2 id="question">This is the question, right?</h2>
+            <h2 id="question"></h2>
             <div id="choice1" class="choice-container button">
-                <p class="choice-text" data-number="1">a. No, this is not the question</p>
+                <p class="choice-text" data-number="1"></p>
             </div>
             <div id="choice2" class="choice-container  button">
-                <p class="choice-text" data-number="2">b. Yes, this is the question</p>
+                <p class="choice-text" data-number="2"></p>
             </div>
             <div id="choice3" class="choice-container  button">
-                <p class="choice-text" data-number="3">c. No, this is a trick question</p>
+                <p class="choice-text" data-number="3"></p>
             </div>
             <div id="choice4" class="choice-container  button">
-                <p class="choice-text" data-number="4">d. I do not know what you are talking about. This is a really dumb question. Because of this, I am going to select this answer as the right one.</p>
+                <p class="choice-text" data-number="4"></p>
             </div>
             <div class="testing-options">
                 <div id="show-answer" class="button">
@@ -44,10 +59,10 @@
                 </div>
             </div>
             <div class="explanation" id="explanation">
-            <p>a. is incorrect because this is a question.</p>
-            <p>b. is correct because although we don't know what "the" questions is, we do know that this is a question, and it can be assumed that this is "the" questions given a lack of context.</p>
-            <p>c. is incorrect because this is not a trick question.</p>
-            <p>d. is incorrect because this is not a dumb question.</p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
             </div>
         </div>
     </div>

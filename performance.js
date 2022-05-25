@@ -57,9 +57,14 @@ fetch("questions.json")
     .then(function(resp) {
         return resp.json();
     })
+    
     .then(function(data){
         loadedQuestions = data;
         displayMissedQuestions();
+    })
+
+    .catch( err => {
+        console.error(err);
     });
 
 displayMissedQuestions = () => {
