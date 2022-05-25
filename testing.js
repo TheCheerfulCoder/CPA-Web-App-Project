@@ -75,7 +75,6 @@ getNewQuestion = () => {
 
     // Fill in the question
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
-    console.log(questionIndex);
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
 
@@ -209,3 +208,12 @@ const toggleModal = () => {
 
 revealModalButton.addEventListener('click', toggleModal);
 backDrop.addEventListener('click', toggleModal);
+
+// document.addEventListener('popstate', () => {
+//     $state.go(console.log('Hi'));
+// });
+
+window.onhashchange = function() {
+    console.log('Hello there!');
+}
+
