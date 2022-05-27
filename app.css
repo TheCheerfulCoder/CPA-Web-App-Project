@@ -46,7 +46,7 @@
     border-radius: 25px;
     background: rgb(0, 0, 0);
     -webkit-box-shadow: 0 0 40px 40px rgb(48, 46, 44) inset, 0 0 0 0 rgb(48, 46, 44);
-            box-shadow: 0 0 40px 40px rgb(48, 46, 44) inset, 0 0 0 0 rgb(48, 46, 44);
+    box-shadow: 0 0 40px 40px rgb(48, 46, 44) inset, 0 0 0 0 rgb(48, 46, 44);
     -webkit-transition: all 150ms ease-in-out;
     transition: all 150ms ease-in-out;
     
@@ -73,7 +73,7 @@ h2 {
 }
 
 p {
-    line-height: 2rem;
+    /* line-height: 2rem; */
 }
 
 #home {
@@ -96,12 +96,12 @@ p {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
     display: none;
 }
-  
+
 .modal.visible {
     display: block;
     animation: fade-slide-in 0.3s ease-out forwards;
 }
-  
+
 
 #backdrop {
     position: fixed;
@@ -114,7 +114,7 @@ p {
     pointer-events: none;
     display: none;
 }
-  
+
 #backdrop.visible {
     display: block;
     pointer-events: all;
