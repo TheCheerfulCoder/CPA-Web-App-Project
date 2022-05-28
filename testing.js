@@ -2,7 +2,6 @@ const question = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
 const progressText = document.getElementById('progressText');
 
-
 const showAnswerButton = document.getElementById('show-answer');
 const nextQuestionButton = document.getElementById('next-question');
 
@@ -37,6 +36,9 @@ startTest = () => {
     getNewQuestion();
 };
  
+doNothing = () => {
+    return;
+}
 
 getNewQuestion = () => {
     // Remove any green/red styling from the previous question's answer
@@ -51,56 +53,90 @@ getNewQuestion = () => {
     answerStylingCorrect.forEach(answerStylingCorrect => {
         answerStylingCorrect.classList.remove('correct')
     })
-
+    
+    const answerStylingRevealed = [...document.getElementsByClassName('button-revealed')]
+    
+    answerStylingRevealed.forEach(answerStylingRevealed => {
+        answerStylingRevealed.classList.remove('button-revealed')
+    })
+    
+    const answerStylingSelected = [...document.getElementsByClassName('button-selected')]
+    
+    answerStylingSelected.forEach(answerStylingSelected => {
+        answerStylingSelected.classList.remove('button-selected')
+    })
+    
     // Hide any explanation stylings from the previous question.
-    document.getElementById('explanation').style.visibility = "hidden";
+    explanationElement = document.getElementById('explanation');
+    explanationElement.innerText = '';
 
     // Update the question counter (e.g. 1/3 --> 2/3)
     questionCounter++;
     progressText.innerHTML = `Question:\u00A0 ${questionCounter}/${MAX_QUESTIONS}`
+
+    // Fill in the question
+    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+    currentQuestion = availableQuestions[questionIndex];
+    question.innerText = currentQuestion.question;
+    
+    // Disable the next question button.
+    nextQuestionButton.onclick = doNothing;
+    nextQuestionButton.classList.toggle('button');
+    nextQuestionButton.classList.toggle('button-disabled');
+
 
     /* When on the last question, change the "NEXT QUESTION" button to a 
        "VIEW PERFORMANCE" performance button. */
     if (questionCounter === MAX_QUESTIONS) {
         // Change the button's text
         var element = document.getElementById("next-question-text");
-        element.innerHTML = "VIEW MY PERFORMANCE";
-
-        // Change the button's action
-        const viewMyPerformance = document.getElementById("next-question")
-        viewMyPerformance.onclick = function RedirectToPerformance() {
-            window.location.href="performance.html";
-        }
+        element.innerHTML = "View Score";
     }
-
-    // Fill in the question
-    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
-    currentQuestion = availableQuestions[questionIndex];
-    question.innerText = currentQuestion.question;
 
     // Fill in the answer options
     choices.forEach( choice => {
         const number = choice.dataset['number'];
         choice.innerText = currentQuestion['choice' + number]
     })
+    
+    // // Fill in the explanation
+    // explanation.innerText = currentQuestion.explanation;
 
-    // Fill in the explanation
-    explanation.innerText = currentQuestion.explanation
-
+    // Send question explanation to local storage for later access in the "ShowAnswer"
+    // function.
+    localStorage.setItem('questionExplanation', currentQuestion.explanation);
+    
     // Remove the question from the list of available questions
     availableQuestions.splice(questionIndex, 1);
-
+    
     // Allow the user to select answers
     acceptingAnswers = true;
+
+    
 };
 
-
-
 choices.forEach( choice => {
-    choice.addEventListener("click", e => {
+    choice.parentElement.addEventListener("click", e => {
         // Prevent the user from selecting more than one answer
         if (!acceptingAnswers) return;
         acceptingAnswers = false;
+
+        // Enable the next question button unless we are on the last question.
+        buttonText = document.getElementById("next-question-text").innerHTML;
+        if (buttonText === 'View Score') {
+                nextQuestionButton.classList.toggle('button');
+                nextQuestionButton.classList.toggle('button-disabled');
+                const viewMyPerformance = document.getElementById("next-question")
+                viewMyPerformance.onclick = function RedirectToPerformance() {
+                window.location.href="performance.html";
+            }
+        } else {
+            nextQuestionButton.onclick = getNewQuestion;
+            nextQuestionButton.classList.toggle('button');
+            nextQuestionButton.classList.toggle('button-disabled');
+        }
+        
+        console.dir(e.target.tagName);
 
         // Get the data for the selected answer
         const selectedChoice = e.target;
@@ -114,7 +150,12 @@ choices.forEach( choice => {
         }
 
         // Change the class element in the HTML for the parent element
-        selectedChoice.parentElement.classList.add(classToApply)
+        if (e.target.tagName == 'P') {
+            selectedChoice.parentElement.classList.add(classToApply, 'button-selected')
+        } else {
+            selectedChoice.classList.add(classToApply, 'button-selected')
+        }
+        
 
         // Store whether the user got the question right or wrong in local storage
         if (classToApply === 'incorrect') {
@@ -178,24 +219,26 @@ function showAnswer () {
     if (acceptingAnswers) {
         return;
     }
-
-    // Make the answer explanation visable.
-    document.getElementById('explanation').style.visibility = "visible";
     
     // Add green highlighting to the correct answer.
     correctChoice = document.getElementById(
         'choice' + String(currentQuestion.answer)
         );
-    correctChoice.classList.add('correct');  
-}
+    correctChoice.classList.add('correct', 'button-revealed');  
+    
+    // // Make the answer explanation visable.
+    
+    // Insert the HTML element
+    explanationElement = document.getElementById('explanation');
+    explanationElement.innerText = localStorage.getItem('questionExplanation');
+    document.getElementById('explanation').style.visibility = "visible";
+}    
 
-nextQuestionButton.onclick = getNewQuestion
 showAnswerButton.onclick = showAnswer;
 
-
-const modal = document.getElementById('modal')
-const backDrop = document.getElementById('backdrop')
-const revealModalButton = document.getElementById('show-answer')
+const modal = document.getElementById('modal');
+const backDrop = document.getElementById('backdrop');
+const revealModalButton = document.getElementById('show-answer');
 
 const toggleModal = () => {
     if (acceptingAnswers) {
@@ -208,12 +251,3 @@ const toggleModal = () => {
 
 revealModalButton.addEventListener('click', toggleModal);
 backDrop.addEventListener('click', toggleModal);
-
-// document.addEventListener('popstate', () => {
-//     $state.go(console.log('Hi'));
-// });
-
-window.onhashchange = function() {
-    console.log('Hello there!');
-}
-

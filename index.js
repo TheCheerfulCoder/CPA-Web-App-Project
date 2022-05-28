@@ -3,6 +3,8 @@ const matches = testScores.match(/\[.+?\]/g);
 const rawString = matches.join()
 const totalQuestionsAnswered = rawString.match(/0/g).length + rawString.match(/1/g).length
 
+console.log(totalQuestionsAnswered)
+
 class Reminder {
     display(msg) {
         const modal = document.getElementById('modal');

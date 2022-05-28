@@ -2,13 +2,24 @@
     /* border: 1px solid green; */
 }
 
+.choice-text {
+    text-align: left;
+}
+
+#question {
+    margin-bottom: 1.25rem;
+    text-align: left;
+    line-height: 25px;
+
+}
+
 .testing-options {
     display: flex;
     justify-content: space-between;
 }
 
 #hud {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 #hud-item {
@@ -21,16 +32,23 @@
 }
 
 .explanation {
-    border: 1px solid green;
+    text-align: left;
+    margin-top: .75rem;
+    border-radius: 25px;
     background-color: rgba(255, 255, 255, 0.055);
-    visibility: hidden;
+    line-height: 25px;
     padding: 1rem;
 }
 
 .correct{
-    background-color: #28a7462a;
+    background-color: #28a74675;
 }
 
 .incorrect {
-    background-color: #dc35463b;
+    background-color: #ff3131b2;
 }
+
+#show-answer, #next-question {
+    margin-top: .75rem;
+}
+

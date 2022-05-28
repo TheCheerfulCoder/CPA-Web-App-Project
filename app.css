@@ -60,6 +60,28 @@
     box-shadow: 0 0 10px 0 #10ff10 inset, 0 0 10px 4px #10ff10;
 }
 
+
+
+.button-revealed {
+    -webkit-box-shadow: 0 0 10px 0 #10ff1000 inset, 0 0 10px 4px #10ff1000;
+    box-shadow: 0 0 10px 0 #10ff1000 inset, 0 0 10px 4px #10ff1000;
+}
+
+.button-selected {
+    -webkit-box-shadow: 0 0 10px 0 #10ff10 inset, 0 0 10px 4px #10ff10;
+    box-shadow: 0 0 10px 0 #10ff10 inset, 0 0 10px 4px #10ff10;
+}
+
+.button-disabled {
+    padding: 1rem;
+    text-decoration: none;
+    margin-bottom: .6rem;
+    border: 1px solid #10ff10;
+    border-radius: 25px;
+    background: rgb(48, 46, 44);
+}
+
+
 h1 {
     margin-bottom: .6rem;
     text-align: center;
@@ -86,15 +108,20 @@ p {
 }
 
 .modal {
+    line-height: 25px;
+    padding: 1rem;
     position: fixed;
     z-index: 100;
     background: rgb(83, 71, 71);
-    border-radius: 10px;
     width: 80%;
     top: 40vh;
     left: 10%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
     display: none;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(43, 42, 40);
 }
 
 .modal.visible {
