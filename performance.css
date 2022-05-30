@@ -1,6 +1,19 @@
+.title {
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.055);
+    /* margin-bottom: 0; */
+}
+
+h1 {
+    /* margin-bottom: -.25rem;
+    margin-top: -.25rem; */
+    padding: 1rem;
+    line-height: 2.25rem;
+    margin-bottom: 0;
+}
+
 table {
-    margin-top: 2rem;
-    width: 100vw
+    width: 80vw;
 }
 
 tr:not(:first-of-type):hover {
@@ -10,8 +23,13 @@ tr:not(:first-of-type):hover {
 }
 
 table, th, td {
-    border: .25px solid green;
+    border: .25px rgb(19, 16, 16);
     border-collapse: collapse;
+}
+
+canvas {
+    width: 80vw;
+    margin-top: .5rem;
 }
 
 th, td {
@@ -20,4 +38,32 @@ th, td {
 
 caption {
     padding-bottom: 1rem;
+}
+
+.flex-center, .flex-column {
+    /* margin-bottom: 1rem; */
+    /* margin-left: 2rem;
+    margin-right: 2rem; */
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    /* width: 80vw; */
+}
+
+.card {
+    width: 85vw;
+}
+
+.bottom {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.top {
+    margin-top: 4rem;
+}
+
+.table {
+    font-weight: normal;
+    font-size: small;
 }

@@ -64,7 +64,7 @@ getNewQuestion = () => {
     if (questionCounter === MAX_QUESTIONS) {
         // Change the button's text
         var element = document.getElementById("next-question-text");
-        element.innerHTML = "VIEW MY PERFORMANCE";
+        element.innerHTML = "Back to Performance";
 
         // Change the button's action
         const viewMyPerformance = document.getElementById("next-question")
