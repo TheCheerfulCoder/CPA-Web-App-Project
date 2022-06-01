@@ -13,8 +13,8 @@ const MAX_QUESTIONS = parseInt(localStorage.getItem("testLength"));
 // Initialize or fetch the "testScores" object that holds all test score data
 let testScores = {};
 
-// Fetch the questions from the "questions.json" file and store them in "questions"
-fetch("questions.json")
+// Fetch the questions from the "/assets/questions.json" file and store them in "questions"
+fetch("/assets/questions.json")
     .then( res => {
         return res.json();
     })
@@ -128,7 +128,7 @@ choices.forEach( choice => {
                 nextQuestionButton.classList.toggle('button-disabled');
                 const viewMyPerformance = document.getElementById("next-question")
                 viewMyPerformance.onclick = function RedirectToPerformance() {
-                window.location.href="performance.html";
+                window.location.href="/app/dashboard/dashboard.html";
             }
         } else {
             nextQuestionButton.onclick = getNewQuestion;
