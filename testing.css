@@ -52,3 +52,9 @@
     margin-top: .75rem;
 }
 
+@media (min-width: 450px) {
+    .flex-center .flex-column{
+        width: 60vw;
+    }
+}
+

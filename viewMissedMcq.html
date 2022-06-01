@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        body {
+            background-size: cover; /* or contain depending on what you want */
+            background-position: center center;
+            background-repeat: no-repeat;
+            text-align:center;
+            margin:auto;
+            padding:0;
+            background-image: url("background2.jpg");
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Study Missed Question</title>
@@ -25,51 +36,44 @@
     </div>
     <div id="backdrop"></div>
     <div class="modal" id="modal">
-        <p>Nice Try!😉 Select a question before clicking the show answer button.</p>
+        <p>Nice Try!😉 Please select a question before clicking the show answer button.</p>
     </div>
     <div class="container">
-        <div id="game" class="flex-column">
-            <div id="hud">
-                <div id="hud-item">
-                    <div id="progressText">
-                        <p></p> 
+        <div id="home" class="flex-center flex-column" id="card">
+            <div id="game" class="flex-column">
+                <div id="hud">
+                    <div id="hud-item">
+                        <div id="progressText">
+                            <p></p> 
+                        </div>
+                    </div>    
+                </div>
+                <p id="question"></p>
+                <div id="choice1" class="choice-container button" data-number="1">
+                    <p class="choice-text" data-number="1"></p>
+                </div>
+                <div id="choice2" class="choice-container  button" data-number="2">
+                    <p class="choice-text" data-number="2"></p>
+                </div>
+                <div id="choice3" class="choice-container  button" data-number="3">
+                    <p class="choice-text" data-number="3"></p>
+                </div>
+                <div id="choice4" class="choice-container  button" data-number="4"> 
+                    <p class="choice-text" data-number="4"></p>
+                </div>
+                <div class="testing-options">
+                    <div id="show-answer" class="button">
+                        <p>Show Answer</p> 
+                    </div>
+                    <div id="next-question" class="button">
+                        <p id="next-question-text">Back To Performance</p> 
                     </div>
                 </div>
-                <div id="hud-item">
-                    <div id="timer">
-                        <p>Time: 00:00:32</p> 
-                    </div>
-                </div> 
-            </div>
-            <h2 id="question"></h2>
-            <div id="choice1" class="choice-container button">
-                <p class="choice-text" data-number="1"></p>
-            </div>
-            <div id="choice2" class="choice-container  button">
-                <p class="choice-text" data-number="2"></p>
-            </div>
-            <div id="choice3" class="choice-container  button">
-                <p class="choice-text" data-number="3"></p>
-            </div>
-            <div id="choice4" class="choice-container  button">
-                <p class="choice-text" data-number="4"></p>
-            </div>
-            <div class="testing-options">
-                <div id="show-answer" class="button">
-                    <p>SHOW ANSWER</p> 
-                </div>
-                <div id="next-question" class="button">
-                    <p id="next-question-text">NEXT QUESTION</p> 
-                </div>
-            </div>
-            <div class="explanation" id="explanation">
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+                <div class="explanation" id="explanation"></div>
             </div>
         </div>
     </div>
-    <script src="viewMissedMCQ.js"></script>
+    <script src="viewMissedMcq.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
