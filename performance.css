@@ -63,7 +63,36 @@ caption {
     margin-top: 4rem;
 }
 
-.table {
-    font-weight: normal;
-    font-size: small;
+
+.parent {
+    width: 75vw;
+    margin-top: .5rem; 
+    display: flex;
+    justify-content: space-between;
+}
+
+.child {
+    padding: 1rem;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    font-size: smaller;
+}
+
+
+
+.button {
+    margin-top: 0rem;
+    margin-left: 0rem;
+    text-align: left;
+    padding: 0rem;
+    height: 5rem;
+}
+
+.button:last-of-type {
+    margin-bottom: 0;
+}
+
+.table-header {
+    font-size: larger;
 }

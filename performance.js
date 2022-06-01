@@ -53,7 +53,13 @@ const myChart = new Chart(ctx, {
             y: {
                 beginAtZero: true,
                 max: 100
+                [{
+                    afterDataLimits: function(axis) {
+                       axis.max += 1;
+                    }
+                 }]
             }
+
         }
     }
 });
@@ -75,75 +81,52 @@ fetch("questions.json")
     });
 
 displayMissedQuestions = () => {
+    /* Create a table of buttons that show a preivew of the every missed 
+    question (i.e, How many times does it...) and the number of times that 
+    question was missed. When the user clicks on each button, it should take 
+    them to the viewMissedQuestion.js page to study the missed question. */
+    
     // Get the array of missed questions from local storage
     let missedQuestions = JSON.parse(localStorage.getItem('missedQuestions'));
-    
-    console.log(missedQuestions);
 
-    // Create an object that contains all the missed questions and their frequency
-    // Example: {00001: 3, 00003: 5, 00002: 6}
+    // Create an object that contains all the missed questions and their 
+    // frequency. Example: {00001: 3, 00003: 5, 00002: 6}
     const missedQuestionsObject = {};
     for (const num of missedQuestions) {
-        missedQuestionsObject[num] = missedQuestionsObject[num] ? missedQuestionsObject[num] + 1 : 1;
+        missedQuestionsObject[
+            num
+        ] = missedQuestionsObject[num] ? missedQuestionsObject[num] + 1 : 1;
     }
 
-    console.log(missedQuestionsObject)
-
-    // Turn the "missedQuestionsObject" into a multidemensional array
-    // Example: [['00002', 6], ['00003', 5], ['00001', 3]]
+    // Turn the "missedQuestionsObject" into a multidemensional array.
+    // Example: [['00002', 6], ['00003', 5], ['00001', 3]].
     const missedQuestionsArray = Object.entries(missedQuestionsObject)
 
-    console.log(missedQuestionsArray);
-
-    /* NOTE: The following step may not be necessary. I just don't know if the
-             Object.entries() method above sorts in descending order. */
-
-    // Sort the multidemensional array in descending order based on frequency
+    // Sort the multidemensional array in descending order based on frequency.
     missedQuestionsArray.sort(function (a, b) {
         return b[1] - a[1];
     });
 
-    console.log(missedQuestionsArray);
-    
-    // Get a reference to the table
-    let tableRef = document.getElementById("missed-questions-table");
-
-    // Fill out the "Missed Questions" table
-    for (row = 0; row < missedQuestionsArray.length; row++) {
-        // Insert a new row at the bottom of the table
-        let newRow = tableRef.insertRow(-1);
-        newRow.id = missedQuestionsArray[row][0];
-        document.getElementById(
-            missedQuestionsArray[row][0]
-            ).addEventListener(
-                'click', viewMissedQuestion.bind(
-                    null,missedQuestionsArray[row][0]
-                    )
-                );
-
-        // Insert the value into the "Number of Times Missed" column's cell
-        let newCell1 = newRow.insertCell(0);
-        let newText1 = document.createTextNode(missedQuestionsArray[row][1]);
-        newCell1.appendChild(newText1);
-
-        // Insert the value into the "Question" column's cell
-        let newCell = newRow.insertCell(0);
-        let newText = document.createTextNode(loadedQuestions[Number(missedQuestionsArray[row][0])].question.substring(0, 40).trim() + '...'); 
-        newCell.appendChild(newText);
-
+    // Render all the buttons on the screen.
+    list = document.querySelector('.list')
+    for (missedQuestion of missedQuestionsArray) {
+        questionID = missedQuestion[0];
+        timesMissed = missedQuestion[1];
+        questionPreview = loadedQuestions[
+            Number(questionID)
+        ].question.substring(0, 40).trim() + '...';
+        
+        list.innerHTML += `
+            <div class="button parent" id="${questionID}">
+                <div class="child">${questionPreview}</div> 
+                <div class="child">${timesMissed}</div> 
+            </div>
+        `;
     }
 
+    // Make each button send the user to the testing page when clicked. 
+    list.addEventListener('click', event => {
+        selectedQuestionID = event.target.closest('.button').id;
+        viewMissedQuestion(selectedQuestionID);
+    });
 };
-
-// const styleTable = () => {
-//     const tableData = document.querySelectorAll('tr');
-//     for (const row of tableData) {
-//         row.classList.add('button');
-//     }
-// }
-
-// const delayTableStyling = setTimeout(styleTable, 2000)
-
-
-
-
