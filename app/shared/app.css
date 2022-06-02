@@ -1,18 +1,15 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 /* *{
     border: 1px solid green;
 } */
 
-
 :root {
     background-color: black;
     font-size: 85%;
 }
 
-
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -41,15 +38,15 @@
 .button {
     padding: 1rem;
     text-decoration: none;
-    margin-bottom: .6rem;
+    margin-bottom: 0.6rem;
     /* border: 1px solid #10ff10; */
     border-radius: 25px;
     background: rgb(0, 0, 0);
-    -webkit-box-shadow: 0 0 40px 40px rgb(48, 46, 44) inset, 0 0 0 0 rgb(48, 46, 44);
+    -webkit-box-shadow: 0 0 40px 40px rgb(48, 46, 44) inset,
+        0 0 0 0 rgb(48, 46, 44);
     box-shadow: 0 0 40px 40px rgb(48, 46, 44) inset, 0 0 0 0 rgb(48, 46, 44);
     -webkit-transition: all 150ms ease-in-out;
     transition: all 150ms ease-in-out;
-    
 }
 
 .button:hover {
@@ -59,8 +56,6 @@
     -webkit-box-shadow: 0 0 10px 0 #10ff10 inset, 0 0 10px 4px #10ff10;
     box-shadow: 0 0 10px 0 #10ff10 inset, 0 0 10px 4px #10ff10;
 }
-
-
 
 .button-revealed {
     -webkit-box-shadow: 0 0 10px 0 #10ff1000 inset, 0 0 10px 4px #10ff1000;
@@ -75,14 +70,13 @@
 .button-disabled {
     padding: 1rem;
     text-decoration: none;
-    margin-bottom: .6rem;
+    margin-bottom: 0.6rem;
     border-radius: 25px;
     background: rgb(48, 46, 44);
 }
 
-
 h1 {
-    margin-bottom: .6rem;
+    margin-bottom: 0.6rem;
     text-align: center;
     line-height: 3.5rem;
     /* text-decoration: underline; */
@@ -127,7 +121,6 @@ p {
     display: block;
     animation: fade-slide-in 0.3s ease-out forwards;
 }
-
 
 #backdrop {
     position: fixed;

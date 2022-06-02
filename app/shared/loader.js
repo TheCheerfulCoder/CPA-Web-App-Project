@@ -1,4 +1,6 @@
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     const loader = document.querySelector('.loader-wrapper');
-    setTimeout(() => { loader.className += ' hidden'; }, 0);
+    setTimeout(() => {
+        loader.className += ' hidden';
+    }, 0);
 });

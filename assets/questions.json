@@ -1,42 +1,42 @@
 [
     {
-      "questionID": "00000",
-      "question": "Inside which HTML element do we put the JavaScript??",
-      "choice1": "<script>",
-      "choice2": "<javascript>",
-      "choice3": "<js>",
-      "choice4": "<scripting>",
-      "answer": 1,
-      "explanation": "JavaScript is linked to HTML with the <script> tag." 
+        "questionID": "00000",
+        "question": "Inside which HTML element do we put the JavaScript??",
+        "choice1": "<script>",
+        "choice2": "<javascript>",
+        "choice3": "<js>",
+        "choice4": "<scripting>",
+        "answer": 1,
+        "explanation": "JavaScript is linked to HTML with the <script> tag."
     },
     {
-      "questionID": "00001",
-      "question": "What is the correct syntax for referring to an external script called 'xxx.js'?",
-      "choice1": "<script href='xxx.js'>",
-      "choice2": "<script name='xxx.js'>",
-      "choice3": "<script src='xxx.js'>",
-      "choice4": "<script file='xxx.js'>",
-      "answer": 3,
-      "explanation": "<script src='xxx.js'> is the correct syntax." 
+        "questionID": "00001",
+        "question": "What is the correct syntax for referring to an external script called 'xxx.js'?",
+        "choice1": "<script href='xxx.js'>",
+        "choice2": "<script name='xxx.js'>",
+        "choice3": "<script src='xxx.js'>",
+        "choice4": "<script file='xxx.js'>",
+        "answer": 3,
+        "explanation": "<script src='xxx.js'> is the correct syntax."
     },
     {
-      "questionID": "00002",
-      "question": "How do you write 'Hello World' in an alert box?",
-      "choice1": "msgBox('Hello World');",
-      "choice2": "alertBox('Hello World');",
-      "choice3": "msg('Hello World');",
-      "choice4": "alert('Hello World');",
-      "answer": 4,
-      "explanation": "alert('Hello World'); is how you write 'hello world' in an alert box." 
+        "questionID": "00002",
+        "question": "How do you write 'Hello World' in an alert box?",
+        "choice1": "msgBox('Hello World');",
+        "choice2": "alertBox('Hello World');",
+        "choice3": "msg('Hello World');",
+        "choice4": "alert('Hello World');",
+        "answer": 4,
+        "explanation": "alert('Hello World'); is how you write 'hello world' in an alert box."
     },
     {
-      "questionID": "00003",
-      "question": "Who is batman?",
-      "choice1": "James Gordon",
-      "choice2": "Bruce Wayne",
-      "choice3": "Bruce Lee",
-      "choice4": "Chuck Norris",
-      "answer": 2,
-      "explanation": "Obviously Batman is Bruce Wayne. Have you seen underneath his mansion?" 
+        "questionID": "00003",
+        "question": "Who is batman?",
+        "choice1": "James Gordon",
+        "choice2": "Bruce Wayne",
+        "choice3": "Bruce Lee",
+        "choice4": "Chuck Norris",
+        "answer": 2,
+        "explanation": "Obviously Batman is Bruce Wayne. Have you seen underneath his mansion?"
     }
-  ]
+]

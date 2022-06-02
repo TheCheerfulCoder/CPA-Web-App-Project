@@ -10,7 +10,6 @@
     margin-bottom: 1.25rem;
     text-align: left;
     line-height: 25px;
-
 }
 
 .testing-options {
@@ -26,21 +25,21 @@
     text-align: right;
 }
 
-.explanation p{
+.explanation p {
     /* border: 1px solid green; */
-    padding: .75rem;
+    padding: 0.75rem;
 }
 
 .explanation {
     text-align: left;
-    margin-top: .75rem;
+    margin-top: 0.75rem;
     border-radius: 25px;
     background-color: rgba(255, 255, 255, 0.055);
     line-height: 25px;
     padding: 1rem;
 }
 
-.correct{
+.correct {
     background-color: #28a74675;
 }
 
@@ -48,13 +47,13 @@
     background-color: #ff3131b2;
 }
 
-#show-answer, #next-question {
-    margin-top: .75rem;
+#show-answer,
+#next-question {
+    margin-top: 0.75rem;
 }
 
 @media (min-width: 450px) {
-    .flex-center .flex-column{
+    .flex-center .flex-column {
         width: 60vw;
     }
 }
-

@@ -22,32 +22,25 @@ tr:not(:first-of-type):hover {
     transition: transform 150ms;
 }
 
-table, th, td {
-    border: .25px rgb(19, 16, 16);
+table,
+th,
+td {
+    border: 0.25px rgb(19, 16, 16);
     border-collapse: collapse;
 }
 
 canvas {
     width: 80vw;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
 }
 
-th, td {
+th,
+td {
     padding: 10px;
 }
 
 caption {
     padding-bottom: 1rem;
-}
-
-.flex-center, .flex-column {
-    /* margin-bottom: 1rem; */
-    /* margin-left: 2rem;
-    margin-right: 2rem; */
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
-    /* width: 80vw; */
 }
 
 .card {
@@ -63,10 +56,9 @@ caption {
     margin-top: 4rem;
 }
 
-
 .parent {
     width: 75vw;
-    margin-top: .5rem; 
+    margin-top: 0.5rem;
     display: flex;
     justify-content: space-between;
 }
@@ -78,8 +70,6 @@ caption {
     text-align: center;
     font-size: smaller;
 }
-
-
 
 .button {
     margin-top: 0rem;
