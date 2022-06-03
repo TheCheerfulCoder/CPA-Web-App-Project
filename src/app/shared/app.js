@@ -1,1 +1,1 @@
-history.replaceState(null, null, '/homepage/index.html');
+history.replaceState(null, null, '/index.html');

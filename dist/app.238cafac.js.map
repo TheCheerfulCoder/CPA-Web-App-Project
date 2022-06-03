@@ -1,1 +1,0 @@
-{"version":3,"sources":["shared/app.js"],"names":["history","replaceState"],"mappings":";AAAAA,QAAQC,aAAa,KAAM,KAAM","file":"app.238cafac.js","sourceRoot":"..\\src\\app","sourcesContent":["history.replaceState(null, null, '/homepage/index.html');\r\n"]}
