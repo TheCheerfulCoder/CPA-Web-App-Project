@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* *{
+    border: 1px solid green;
+} */
+
+body {
+  background-size: cover; /* or contain depending on what you want */
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-align: center;
+  margin: auto;
+  padding: 0;
+  background-image: url('/background.205e93b3.jpg');
+}
+
+:root {
+  background-color: black;
+  font-size: 85%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #10ff10;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  align-items: center;
+}
+
+.button {
+  padding: 1rem;
+  text-decoration: none;
+  margin-bottom: 0.6rem;
+  /* border: 1px solid #10ff10; */
+  border-radius: 25px;
+  background: rgb(0, 0, 0);
+  -webkit-box-shadow: 0 0 40px 40px rgb(48, 46, 44) inset,
+    0 0 0 0 rgb(48, 46, 44);
+  box-shadow: 0 0 40px 40px rgb(48, 46, 44) inset, 0 0 0 0 rgb(48, 46, 44);
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.button:hover {
+  cursor: pointer;
+  transform: translateY(-0.15rem);
+  transition: transform 150ms;
+  -webkit-box-shadow: 0 0 10px 0 #10ff10 inset, 0 0 10px 4px #10ff10;
+  box-shadow: 0 0 10px 0 #10ff10 inset, 0 0 10px 4px #10ff10;
+}
+
+.button-revealed {
+  -webkit-box-shadow: 0 0 10px 0 #10ff1000 inset, 0 0 10px 4px #10ff1000;
+  box-shadow: 0 0 10px 0 #10ff1000 inset, 0 0 10px 4px #10ff1000;
+}
+
+.button-selected {
+  -webkit-box-shadow: 0 0 10px 0 #10ff10 inset, 0 0 10px 4px #10ff10;
+  box-shadow: 0 0 10px 0 #10ff10 inset, 0 0 10px 4px #10ff10;
+}
+
+.button-disabled {
+  padding: 1rem;
+  text-decoration: none;
+  margin-bottom: 0.6rem;
+  border-radius: 25px;
+  background: rgb(48, 46, 44);
+}
+
+h1 {
+  margin-bottom: 0.6rem;
+  text-align: center;
+  line-height: 3.5rem;
+  /* text-decoration: underline; */
+  font-size: 200%;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+}
+
+p {
+  /* line-height: 2rem; */
+}
+
+#home {
+  border-radius: 25px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: rgb(43, 42, 40);
+  background-color: rgb(19, 16, 16);
+  padding: 20px;
+}
+
+.modal {
+  line-height: 25px;
+  padding: 1rem;
+  position: fixed;
+  z-index: 100;
+  background: rgb(83, 71, 71);
+  width: 80%;
+  top: 40vh;
+  left: 10%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  display: none;
+  border-radius: 25px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: rgb(43, 42, 40);
+}
+
+.modal.visible {
+  display: block;
+  animation: fade-slide-in 0.3s ease-out forwards;
+}
+
+#backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 10;
+  pointer-events: none;
+  display: none;
+}
+
+#backdrop.visible {
+  display: block;
+  pointer-events: all;
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 150%;
+  }
+  .button {
+    font-size: 90%;
+  }
+}
+
+
+/*# sourceMappingURL=/app.69a05aa6.css.map */
