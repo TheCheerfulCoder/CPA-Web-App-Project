@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "A web application that helps CPA candidates score highly on the IT portion of the BEC exam.",
   "scripts": {
-    "cleanup": "rm -r dist",
+    "cleanup": "rm -r dist && rm -r .cache",
     "dev": "npm run cleanup && mkdir dist && cp src/assets/questions.json dist && parcel src/app/dashboard/*.html src/app/homepage/*.html src/app/testPages/*.html",
-    "build": "npm run cleanup && mkdir dist && cp src/assets/questions.json dist && parcel build src/app/dashboard/*.html src/app/homepage/*.html src/app/testPages/*.html"
+    "build": "npm run cleanup && mkdir dist && cp src/assets/questions.json dist && parcel build src/app/dashboard/*.html src/app/homepage/*.html src/app/testPages/*.html --public-url ./"
   },
   "repository": {
     "type": "git",
