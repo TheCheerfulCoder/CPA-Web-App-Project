@@ -118,7 +118,7 @@ getNewQuestion = () => {
 
   const viewMyPerformance = document.getElementById('next-question');
   viewMyPerformance.onclick = function RedirectToPerformance() {
-    window.location.href = '/dashboard/dashboard.html';
+    window.location.href = '/CPA-Web-App-Project/dashboard/dashboard.html';
   };
 };
 
@@ -138,7 +138,7 @@ choices.forEach((choice) => {
       // nextQuestionButton.classList.toggle('button-disabled');
       const viewMyPerformance = document.getElementById('next-question');
       viewMyPerformance.onclick = function RedirectToPerformance() {
-        window.location.href = '/dashboard/dashboard.html';
+        window.location.href = '/CPA-Web-App-Project/dashboard/dashboard.html';
       };
     } else {
       // nextQuestionButton.onclick = getNewQuestion;
@@ -146,7 +146,7 @@ choices.forEach((choice) => {
       // nextQuestionButton.classList.toggle('button-disabled');
       const viewMyPerformance = document.getElementById('next-question');
       viewMyPerformance.onclick = function RedirectToPerformance() {
-        window.location.href = '/dashboard/dashboard.html';
+        window.location.href = '/CPA-Web-App-Project/dashboard/dashboard.html';
       };
     }
 
@@ -262,7 +262,7 @@ function showAnswer() {
 
 const viewMyPerformance = document.getElementById('next-question');
 viewMyPerformance.onclick = function RedirectToPerformance() {
-  window.location.href = '/dashboard/dashboard.html';
+  window.location.href = '/CPA-Web-App-Project/dashboard/dashboard.html';
 };
 
 showAnswerButton.onclick = showAnswer;
