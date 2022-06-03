@@ -1,1 +1,0 @@
-{"version":3,"sources":["shared/app.js"],"names":["history","replaceState"],"mappings":";AAAAA,QAAQC,aAAa,KAAM,KAAM","file":"app.108b0333.js","sourceRoot":"..\\src\\app","sourcesContent":["history.replaceState(null, null, '/index.html');\r\n"]}
