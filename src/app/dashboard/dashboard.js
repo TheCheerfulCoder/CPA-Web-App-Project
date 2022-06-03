@@ -2,7 +2,7 @@ const ctx = document.getElementById('myChart');
 
 const viewMissedQuestion = (questionID) => {
   localStorage.setItem('studyQuestionID', questionID);
-  window.location.href = '/app/dashboard/viewMissedQuestion.html';
+  window.location.href = '/dashboard/viewMissedQuestion.html';
 };
 
 // Get key names of the most recent six tests.
@@ -60,7 +60,7 @@ const myChart = new Chart(ctx, {
 });
 
 // Fetch the data from /assets/questions.json
-fetch('/assets/questions.json')
+fetch('../questions.json')
   .then(function (resp) {
     return resp.json();
   })
