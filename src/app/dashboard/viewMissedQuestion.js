@@ -14,7 +14,7 @@ const MAX_QUESTIONS = 1;
 let testScores = {};
 
 // Fetch the questions from the "/assets/questions.json" file and store them in "questions"
-fetch('CPA-Web-App-Project/questions.json')
+fetch('questions.json')
   .then((res) => {
     return res.json();
   })

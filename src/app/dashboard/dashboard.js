@@ -60,7 +60,7 @@ const myChart = new Chart(ctx, {
 });
 
 // Fetch the data from /assets/questions.json
-fetch('CPA-Web-App-Project/questions.json')
+fetch('questions.json')
   .then(function (resp) {
     return resp.json();
   })
