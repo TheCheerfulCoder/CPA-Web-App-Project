@@ -5,7 +5,7 @@
   "scripts": {
     "cleanup": "rm -r dist && rm -r .cache",
     "dev": "npm run cleanup && mkdir dist && cp src/assets/questions.json dist && parcel src/app/dashboard/*.html src/app/*.html src/app/testPages/*.html",
-    "build": "npm run cleanup && mkdir dist && cp src/assets/questions.json dist && parcel build src/app/dashboard/*.html src/app/*.html src/app/testPages/*.html --public-url CPA-Web-App-Project"
+    "build": "npm run cleanup && mkdir dist && cp src/assets/questions.json dist && parcel build src/app/dashboard/*.html src/app/*.html src/app/testPages/*.html --public-url /CPA-Web-App-Project"
   },
   "repository": {
     "type": "git",
