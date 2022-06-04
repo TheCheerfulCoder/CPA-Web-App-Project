@@ -14,7 +14,7 @@ const MAX_QUESTIONS = parseInt(localStorage.getItem('testLength'));
 let testScores = {};
 
 // Fetch the questions from the "/assets/questions.json" file and store them in "questions"
-fetch('../questions.json')
+fetch('questions.json')
   .then((res) => {
     return res.json();
   })
