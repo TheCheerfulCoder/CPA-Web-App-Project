@@ -1,1 +1,0 @@
-{"version":3,"sources":["shared/app.js"],"names":["history","replaceState"],"mappings":"AAAAA,OAAO,CAACC,YAAR,CAAqB,IAArB,EAA2B,IAA3B,EAAiC,iCAAjC","file":"app.846df825.js","sourceRoot":"..\\src\\app","sourcesContent":["history.replaceState(null, null, '/CPA-Web-App-Project/index.html');\r\n"]}

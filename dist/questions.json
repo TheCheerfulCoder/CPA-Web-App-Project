@@ -1,42 +1,52 @@
 [
     {
         "questionID": "00000",
-        "question": "Inside which HTML element do we put the JavaScript??",
-        "choice1": "<script>",
-        "choice2": "<javascript>",
-        "choice3": "<js>",
-        "choice4": "<scripting>",
-        "answer": 1,
-        "explanation": "JavaScript is linked to HTML with the <script> tag."
+        "question": "In which film does Luke find out Darth Vader is his father?",
+        "choice1": "A New Hope",
+        "choice2": "The Empire Strikes Back",
+        "choice3": "Return of the Jedi",
+        "choice4": "Attack of the Clones",
+        "answer": 2,
+        "explanation": "It was The Empire Strikes Back."
     },
     {
         "questionID": "00001",
-        "question": "What is the correct syntax for referring to an external script called 'xxx.js'?",
-        "choice1": "<script href='xxx.js'>",
-        "choice2": "<script name='xxx.js'>",
-        "choice3": "<script src='xxx.js'>",
-        "choice4": "<script file='xxx.js'>",
+        "question": "Who is considered to be the most hated character in Star Wars?",
+        "choice1": "Jabba the Hut",
+        "choice2": "Darth Maul",
+        "choice3": "Jar Jar Binx",
+        "choice4": "Anakin Skywalker",
         "answer": 3,
-        "explanation": "<script src='xxx.js'> is the correct syntax."
+        "explanation": "Jar Jar the Sith Lord is the most hated character because he is pure evil."
     },
     {
         "questionID": "00002",
-        "question": "How do you write 'Hello World' in an alert box?",
-        "choice1": "msgBox('Hello World');",
-        "choice2": "alertBox('Hello World');",
-        "choice3": "msg('Hello World');",
-        "choice4": "alert('Hello World');",
-        "answer": 4,
-        "explanation": "alert('Hello World'); is how you write 'hello world' in an alert box."
+        "question": "According to Yoda, which of these is the path to the Dark Side?",
+        "choice1": "Pain",
+        "choice2": "Hate",
+        "choice3": "Fear",
+        "choice4": "Envy",
+        "answer": 3,
+        "explanation": "\"Fear is the path to the dark side … fear leads to anger …  anger leads to hate … hate leads to suffering.\" — Yoda."
     },
     {
         "questionID": "00003",
-        "question": "Who is batman?",
-        "choice1": "James Gordon",
-        "choice2": "Bruce Wayne",
-        "choice3": "Bruce Lee",
-        "choice4": "Chuck Norris",
-        "answer": 2,
-        "explanation": "Obviously Batman is Bruce Wayne. Have you seen underneath his mansion?"
+        "question": "Who freed Princess Leia from her chains at Jabba's palace?",
+        "choice1": "Luke Skywalker",
+        "choice2": "Han Solo",
+        "choice3": "Chewbacca",
+        "choice4": "R2-D2",
+        "answer": 4,
+        "explanation": "R2-D2 was the one who saved Princess Leia from the chains."
+    },
+    {
+        "questionID": "00004",
+        "question": "Who killed Jango Fett?",
+        "choice1": "Mace Windu",
+        "choice2": "Anakin Skywalker",
+        "choice3": "Yoda",
+        "choice4": "Obi-Wan Kenobi",
+        "answer": 1,
+        "explanation": "Mace Windu was the one who killed Jango Fett."
     }
 ]

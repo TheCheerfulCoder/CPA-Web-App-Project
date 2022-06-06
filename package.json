@@ -6,7 +6,7 @@
     "cleanup": "rm -r dist && rm -r .cache",
     "dev": "npm run cleanup && mkdir dist && cp src/assets/questions.json dist && parcel src/app/index.html src/app/dashboard/*.html src/app/testPages/*.html --public-url /CPA-Web-App-Project",
     "build": "npm run cleanup && mkdir dist && cp src/assets/questions.json dist && parcel build src/app/index.html src/app/dashboard/*.html src/app/testPages/*.html --public-url /CPA-Web-App-Project",
-    "deploy": "npm run build && git add --all && git commit -am'Deploy to gh-pages' && git push && git subtree push --prfix dist origin gh-pages"
+    "deploy": "npm run build && git add --all && git commit -m'Deploy' && git push && git subtree push --prfix dist origin gh-pages"
   },
   "repository": {
     "type": "git",
