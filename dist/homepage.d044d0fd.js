@@ -128,7 +128,6 @@ var testScores = window.localStorage.getItem('testScores');
 var matches = testScores.match(/\[.+?\]/g);
 var rawString = matches.join();
 var totalQuestionsAnswered = rawString.match(/0/g).length + rawString.match(/1/g).length;
-console.log(totalQuestionsAnswered);
 
 var Reminder = /*#__PURE__*/function () {
   function Reminder() {
@@ -166,6 +165,10 @@ switch (totalQuestionsAnswered) {
 
   case 80:
     emailQuestionsReminder.display('Congradulations on completing 80 questions!🥳 Please send questions to itpracticetests@gmail.com');
+    break;
+
+  default:
+    break;
 }
 /* Update the card to display contribution options when the user clickes on the
 "Help Out" button. */
@@ -173,7 +176,8 @@ switch (totalQuestionsAnswered) {
 
 document.getElementById('help-out').addEventListener('click', function () {
   var cardContainer = document.querySelector('.container');
-  cardContainer.innerHTML = "\n    <div id=\"home\" class=\"flex-center flex-column\" id=\"card\">\n      <h1 id=\"header\">".concat('Three Ways to Help Out', "</h1>\n      <a href=\"\" class=\"button\"\n        >", 'Send a Question', "</a>\n      <a href=\"\" class=\"button\"\n        >", 'Contribute In GitHub', "</a>\n      <a href=\"\" class=\"button\"\n        >", 'Donate', "</a>\n  </div>\n  ");
+  cardContainer.innerHTML = "\n    <div id=\"home\" class=\"flex-center flex-column\" id=\"card\">\n      <h1 id=\"header\">".concat('Three Ways to Help Out', "</h1>\n      <a href=\"/CPA-Web-App-Project/homepage/submitQuestion.html\" class=\"button\"\n        >", 'Send a Question', "</a>\n      <a href=\"\" class=\"button\"\n        >", 'Contribute Via GitHub', "</a>\n      <a href=\"\" class=\"button\"\n        >", 'Donate', "</a>\n  </div>\n  ");
+  history.pushState(null, null, '/CPA-Web-App-Project/index.html');
 });
 },{}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -203,7 +207,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61940" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54578" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
