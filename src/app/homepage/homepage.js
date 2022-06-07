@@ -38,3 +38,20 @@ switch (totalQuestionsAnswered) {
       'Congradulations on completing 80 questions!🥳 Please send questions to itpracticetests@gmail.com'
     );
 }
+
+/* Update the card to display contribution options when the user clickes on the
+"Help Out" button. */
+document.getElementById('help-out').addEventListener('click', () => {
+  const cardContainer = document.querySelector('.container');
+  cardContainer.innerHTML = `
+    <div id="home" class="flex-center flex-column" id="card">
+      <h1 id="header">${'Three Ways to Help Out'}</h1>
+      <a href="" class="button"
+        >${'Send a Question'}</a>
+      <a href="" class="button"
+        >${'Contribute In GitHub'}</a>
+      <a href="" class="button"
+        >${'Donate'}</a>
+  </div>
+  `;
+});
