@@ -156,7 +156,7 @@ var Reminder = /*#__PURE__*/function () {
 
 var emailQuestionsReminder = new Reminder();
 
-if (totalQuestionsAnswered <= 60 && totalQuestionsAnswered >= 20) {
+if (totalQuestionsAnswered <= 60 && totalQuestionsAnswered >= 30) {
   if (localStorage.getItem('sendQuestionReminder') !== 'sent') {
     emailQuestionsReminder.display("Congrats on completing ".concat(totalQuestionsAnswered, " questions!\uD83E\uDD73 \n      When studying a subject, it often helps to teach others. You can submit a\n      question by clicking the \"Help Out\" button."));
     localStorage.setItem('sendQuestionReminder', 'sent');
@@ -198,7 +198,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56154" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58357" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
