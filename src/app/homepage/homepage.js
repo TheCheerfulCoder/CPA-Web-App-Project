@@ -22,7 +22,7 @@ class Reminder {
 
 const emailQuestionsReminder = new Reminder();
 
-if (totalQuestionsAnswered <= 60 && totalQuestionsAnswered >= 20) {
+if (totalQuestionsAnswered <= 60 && totalQuestionsAnswered >= 30) {
   if (localStorage.getItem('sendQuestionReminder') !== 'sent') {
     emailQuestionsReminder.display(
       `Congrats on completing ${totalQuestionsAnswered} questions!🥳 
