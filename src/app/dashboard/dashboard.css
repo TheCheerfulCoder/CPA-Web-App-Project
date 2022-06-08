@@ -89,6 +89,6 @@ caption {
 
 .list {
   padding: 1rem;
-  max-height: 400px;
+  max-height: 300px; /* Change to 400. */
   overflow-y: scroll;
 }
