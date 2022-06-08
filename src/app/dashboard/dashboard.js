@@ -1,3 +1,4 @@
+
 const ctx = document.getElementById('myChart');
 
 const viewMissedQuestion = (questionID) => {
@@ -58,6 +59,8 @@ const myChart = new Chart(ctx, {
     },
   },
 });
+
+window.addEventListener('resize', () => { location.reload() });
 
 // Fetch the data from /assets/questions.json
 fetch('../questions.json')
