@@ -1,3 +1,5 @@
+/* If the candidate has completed 30 to 60 questions and they have not already
+received a reminder, remind them to submit a question. */
 const testScores = window.localStorage.getItem('testScores');
 const matches = testScores.match(/\[.+?\]/g);
 const rawString = matches.join();
@@ -20,24 +22,15 @@ class Reminder {
 
 const emailQuestionsReminder = new Reminder();
 
-switch (totalQuestionsAnswered) {
-  case 20:
+if (totalQuestionsAnswered <= 60 && totalQuestionsAnswered >= 20) {
+  if (localStorage.getItem('sendQuestionReminder') !== 'sent') {
     emailQuestionsReminder.display(
-      'Congradulations on completing 20 questions!🥳 Please send questions to itpracticetests@gmail.com',
+      `Congrats on completing ${totalQuestionsAnswered} questions!🥳 
+      When studying a subject, it often helps to teach others. You can submit a
+      question by clicking the "Help Out" button.`,
     );
-    break;
-  case 40:
-    emailQuestionsReminder.display(
-      'Congradulations on completing 40 questions!🥳 Please send questions to itpracticetests@gmail.com',
-    );
-    break;
-  case 80:
-    emailQuestionsReminder.display(
-      'Congradulations on completing 80 questions!🥳 Please send questions to itpracticetests@gmail.com',
-    );
-    break;
-  default:
-    break;
+    localStorage.setItem('sendQuestionReminder', 'sent');
+  }
 }
 
 /* Update the card to display contribution options when the user clickes on the
@@ -55,6 +48,4 @@ document.getElementById('help-out').addEventListener('click', () => {
         >${'Donate'}</a>
   </div>
   `;
-
-  history.pushState(null, null, '/CPA-Web-App-Project/index.html');
 });
