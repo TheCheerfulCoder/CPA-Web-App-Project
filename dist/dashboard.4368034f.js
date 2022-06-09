@@ -231,7 +231,7 @@ displayMissedQuestions = function displayMissedQuestions() {
     questionID = missedQuestion[0];
     timesMissed = missedQuestion[1];
     questionPreview = loadedQuestions[Number(questionID)].question.substring(0, 40).trim() + '...';
-    list.innerHTML += "\n            <div class=\"button parent\" id=\"".concat(questionID, "\">\n                <div class=\"child\">").concat(questionPreview, "</div> \n                <div class=\"child\">").concat(timesMissed, "</div> \n            </div>\n        ");
+    list.innerHTML += "\n            <div class=\"button parent\" id=\"".concat(questionID, "\">\n                <div class=\"child left-child\">").concat(questionPreview, "</div> \n                <div class=\"child\">").concat(timesMissed, "</div> \n            </div>\n        ");
   } // Make each button send the user to the testing page when clicked.
 
 
@@ -268,7 +268,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50196" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53154" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -115,7 +115,7 @@ displayMissedQuestions = () => {
 
     list.innerHTML += `
             <div class="button parent" id="${questionID}">
-                <div class="child">${questionPreview}</div> 
+                <div class="child left-child">${questionPreview}</div> 
                 <div class="child">${timesMissed}</div> 
             </div>
         `;
