@@ -162,17 +162,23 @@ textarea {
   padding: .5rem;
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: #454a4d;
+.question-form {
+  max-height: 90vh;
 }
 
-::-webkit-scrollbar-corner {
-  background-color: #181a1b;
-}
-
-::-webkit-scrollbar {
-  background-color: #202324;
-  color: #aba499;
+@media (min-width: 800px) {
+  ::-webkit-scrollbar-thumb {
+    background-color: #454a4d;
+  }
+  
+  ::-webkit-scrollbar-corner {
+    background-color: #181a1b;
+  }
+  
+  ::-webkit-scrollbar {
+    background-color: #202324;
+    color: #aba499;
+  }
 }
 
 @media (max-width: 500px) {

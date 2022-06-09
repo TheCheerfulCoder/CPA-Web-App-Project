@@ -92,16 +92,3 @@ caption {
   max-height: 300px; /* Change to 400. */
   overflow-y: scroll;
 }
-
-::-webkit-scrollbar-thumb {
-  background-color: #454a4d;
-}
-
-::-webkit-scrollbar-corner {
-  background-color: #181a1b;
-}
-
-::-webkit-scrollbar {
-  background-color: #202324;
-  color: #aba499;
-}
