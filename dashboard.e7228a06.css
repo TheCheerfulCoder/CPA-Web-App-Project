@@ -8,8 +8,9 @@ h1 {
   /* margin-bottom: -.25rem;
     margin-top: -.25rem; */
   padding: 1rem;
-  line-height: 2.25rem;
+  /* line-height: 2.25rem; */
   margin-bottom: 0;
+  font-size: 180%;
 }
 
 table {
@@ -32,6 +33,7 @@ td {
 canvas {
   width: 80vw;
   margin: 0.5rem;
+  margin-top: 1rem;
 }
 
 th,
@@ -80,6 +82,7 @@ caption {
   text-align: left;
   padding: 0rem;
   height: 5rem;
+  font-size: 85%;
 }
 
 .button:last-of-type {
@@ -87,7 +90,7 @@ caption {
 }
 
 .table-header {
-  font-size: larger;
+  font-size: 110%;
 }
 
 .list {
