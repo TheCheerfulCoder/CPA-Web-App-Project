@@ -52,6 +52,13 @@
   margin-top: 0.75rem;
 }
 
+.button {
+  width: auto;
+  height: auto;
+  font-size: unset;
+  justify-content: left;
+}
+
 @media (min-width: 450px) {
   .flex-center .flex-column {
     width: 60vw;

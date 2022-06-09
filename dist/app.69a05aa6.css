@@ -85,6 +85,7 @@ body {
 
 .button-disabled {
   padding: 1rem;
+  margin-left: .5rem;
   text-decoration: none;
   margin-bottom: 0.6rem;
   border-radius: 25px;
@@ -193,9 +194,10 @@ textarea {
     line-height: 4rem;
   }
   .button {
-    font-size: 100%;
+    font-size: 125%;
     width: 70vw;
-    height: 60px;
+    height: 70px;
+    line-height: 2rem;
   }
 }
 

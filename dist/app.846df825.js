@@ -119,10 +119,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"shared/app.js":[function(require,module,exports) {
 /* Make navigation within the app intuitive for optimal user experiance. */
-history.pushState(null, '', '/CPA-Web-App-Project/index.html');
-addEventListener('popstate', function (event) {
-  location.reload();
-});
+history.pushState(null, '', '/CPA-Web-App-Project/index.html'); // addEventListener('popstate', event => { location.reload() });
 },{}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
