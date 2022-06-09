@@ -47,9 +47,13 @@ body {
 }
 
 .button {
+  line-height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 1rem;
   text-decoration: none;
-  margin-bottom: 0.6rem;
+  margin-bottom: .75rem;
   /* border: 1px solid #10ff10; */
   border-radius: 25px;
   background: rgb(0, 0, 0);
@@ -59,6 +63,7 @@ body {
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
 }
+
 
 .button:hover {
   cursor: pointer;
@@ -87,9 +92,9 @@ body {
 }
 
 h1 {
-  margin-bottom: 0.6rem;
+  margin-bottom: 1rem;
   text-align: center;
-  line-height: 3.5rem;
+  line-height: 2.5rem;
   /* text-decoration: underline; */
   font-size: 200%;
 }
@@ -103,7 +108,7 @@ p {
 }
 
 #home {
-  border-radius: 25px;
+  border-radius: 50px;
   border-style: solid;
   border-width: 5px;
   border-color: rgb(43, 42, 40);
@@ -184,9 +189,12 @@ textarea {
 
 @media (max-width: 500px) {
   h1 {
-    font-size: 150%;
+    font-size: 250%;
+    line-height: 4rem;
   }
   .button {
-    font-size: 90%;
+    font-size: 100%;
+    width: 70vw;
+    height: 60px;
   }
 }
