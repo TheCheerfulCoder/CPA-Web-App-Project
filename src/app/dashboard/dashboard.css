@@ -10,7 +10,7 @@ h1 {
   padding: 1rem;
   /* line-height: 2.25rem; */
   margin-bottom: 0;
-  font-size: 180%;
+  /* font-size: 250%; */
 }
 
 table {
@@ -97,6 +97,12 @@ caption {
   padding: .5rem;
   max-height: 300px; /* Change to 400. */
   overflow-y: scroll;
+}
+
+.lineChart {
+  position: relative;
+  height: 75vh;
+  width: 80vw;
 }
 
 @media (min-width: 800px) {

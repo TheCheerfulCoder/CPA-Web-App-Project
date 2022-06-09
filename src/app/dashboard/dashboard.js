@@ -39,6 +39,7 @@ const myChart = new Chart(ctx, {
     ],
   },
   options: {
+    responsive: true,
     plugins: {
       legend: {
         display: false,
