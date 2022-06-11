@@ -162,14 +162,6 @@ if (totalQuestionsAnswered <= 60 && totalQuestionsAnswered >= 30) {
     localStorage.setItem('sendQuestionReminder', 'sent');
   }
 }
-/* Update the card to display contribution options when the user clickes on the
-"Help Out" button. */
-
-
-document.getElementById('help-out').addEventListener('click', function () {
-  var cardContainer = document.querySelector('.container');
-  cardContainer.innerHTML = "\n    <div id=\"home\" class=\"flex-center flex-column\" id=\"card\">\n      <h1 id=\"header\">".concat('Three Ways to Help Out', "</h1>\n      <a href=\"/CPA-Web-App-Project/homepage/submitQuestion.html\" class=\"button\"\n        >", 'Send a Question', "</a>\n      <a href=\"\" class=\"button\"\n        >", 'Contribute Via GitHub', "</a>\n      <a href=\"\" class=\"button\"\n        >", 'Donate', "</a>\n  </div>\n  ");
-});
 },{}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -198,7 +190,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58501" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53617" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
