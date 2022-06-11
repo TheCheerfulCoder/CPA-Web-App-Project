@@ -200,8 +200,8 @@ textarea {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 424px) {
   h1 {
-    font-size: 190%;
+    font-size: 180%;
   }
 }
