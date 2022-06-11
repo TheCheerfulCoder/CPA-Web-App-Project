@@ -32,20 +32,3 @@ if (totalQuestionsAnswered <= 60 && totalQuestionsAnswered >= 30) {
     localStorage.setItem('sendQuestionReminder', 'sent');
   }
 }
-
-/* Update the card to display contribution options when the user clickes on the
-"Help Out" button. */
-document.getElementById('help-out').addEventListener('click', () => {
-  const cardContainer = document.querySelector('.container');
-  cardContainer.innerHTML = `
-    <div id="home" class="flex-center flex-column" id="card">
-      <h1 id="header">${'Three Ways to Help Out'}</h1>
-      <a href="/CPA-Web-App-Project/homepage/submitQuestion.html" class="button"
-        >${'Send a Question'}</a>
-      <a href="" class="button"
-        >${'Contribute Via GitHub'}</a>
-      <a href="" class="button"
-        >${'Donate'}</a>
-  </div>
-  `;
-});
