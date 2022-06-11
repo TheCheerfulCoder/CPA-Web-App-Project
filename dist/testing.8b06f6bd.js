@@ -141,7 +141,7 @@ var MAX_QUESTIONS = parseInt(localStorage.getItem('testLength')); // Initialize 
 
 var testScores = {}; // Fetch the questions from the "/assets/questions.json" file and store them in "questions"
 
-fetch('questions.json').then(function (res) {
+fetch('../questions.json').then(function (res) {
   return res.json();
 }).then(function (loadedQuestions) {
   questions = loadedQuestions;
@@ -239,6 +239,7 @@ choices.forEach(function (choice) {
       var viewMyPerformance = document.getElementById('next-question');
 
       viewMyPerformance.onclick = function RedirectToPerformance() {
+        history.replaceState(null, '', '/CPA-Web-App-Project/index.html');
         window.location.href = '/CPA-Web-App-Project/dashboard/dashboard.html';
       };
     } else {
@@ -379,7 +380,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53617" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54164" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
