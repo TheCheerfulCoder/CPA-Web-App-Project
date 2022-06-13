@@ -1,3 +1,11 @@
+/* If the current URL includes "index.html", then user has pressed the back
+button after completing the quiz, so reload the home page. */
+if (window.location.href.includes('index.html')) {
+  window.location.replace('index.html');
+}
+
+console.log(window.location.href.includes('index.html'));
+
 const question = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
 const progressText = document.getElementById('progressText');
