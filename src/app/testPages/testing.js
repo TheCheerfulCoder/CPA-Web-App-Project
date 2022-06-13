@@ -1,10 +1,11 @@
 /* If the current URL includes "index.html", then user has pressed the back
 button after completing the quiz, so reload the home page. */
+console.log(window.location.href.includes('index.html'));
+
 if (window.location.href.includes('index.html')) {
-  window.location.replace('index.html');
+  window.location.reload('/CPA-Web-App-Project/index.html');
 }
 
-console.log(window.location.href.includes('index.html'));
 
 const question = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
