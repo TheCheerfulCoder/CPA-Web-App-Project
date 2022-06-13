@@ -1,3 +1,6 @@
+window.addEventListener('popstate', function() {
+  console.log('The popstate event occured!');
+});
 
 const ctx = document.getElementById('myChart');
 

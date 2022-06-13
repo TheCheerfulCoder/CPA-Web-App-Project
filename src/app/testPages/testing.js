@@ -1,11 +1,10 @@
 /* If the current URL includes "index.html", then user has pressed the back
 button after completing the quiz, so reload the home page. */
-console.log(window.location.href.includes('index.html'));
+// console.log(window.location.href.includes('index.html'));
 
-if (window.location.href.includes('index.html')) {
-  window.location.reload('/CPA-Web-App-Project/index.html');
-}
-
+// if (window.location.href.includes('index.html')) {
+//   window.location.reload('/CPA-Web-App-Project/index.html');
+// }
 
 const question = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
@@ -138,7 +137,7 @@ choices.forEach((choice) => {
       nextQuestionButton.classList.toggle('button-disabled');
       const viewMyPerformance = document.getElementById('next-question');
       viewMyPerformance.onclick = function RedirectToPerformance() {
-        history.replaceState( {} , '', '/CPA-Web-App-Project/index.html');
+        history.replaceState({}, '', '/CPA-Web-App-Project/index.html');
         window.location.href = '/CPA-Web-App-Project/dashboard/dashboard.html';
       };
     } else {
@@ -146,8 +145,6 @@ choices.forEach((choice) => {
       nextQuestionButton.classList.toggle('button');
       nextQuestionButton.classList.toggle('button-disabled');
     }
-
-    console.dir(e.target.tagName);
 
     // Get the data for the selected answer
     const selectedChoice = e.target;
