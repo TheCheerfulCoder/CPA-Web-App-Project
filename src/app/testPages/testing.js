@@ -141,7 +141,7 @@ choices.forEach((choice) => {
       nextQuestionButton.classList.toggle('button-disabled');
       const viewMyPerformance = document.getElementById('next-question');
       viewMyPerformance.onclick = function RedirectToPerformance() {
-        history.replaceState({}, '', '/CPA-Web-App-Project/index.html');
+        // history.replaceState({}, '', '/CPA-Web-App-Project/index.html');
         window.location.href = '/CPA-Web-App-Project/dashboard/dashboard.html';
       };
     } else {
