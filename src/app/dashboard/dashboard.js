@@ -1,5 +1,5 @@
-window.addEventListener('popstate', function() {
-  console.log('The popstate event occured!');
+window.addEventListener('popstate', event => {
+  console.log('The popstate event occured in dashboard.js!');
 });
 
 const ctx = document.getElementById('myChart');

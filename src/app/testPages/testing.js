@@ -2,6 +2,10 @@
 button after completing the quiz, so reload the home page. */
 // console.log(window.location.href.includes('index.html'));
 
+window.addEventListener('popstate', event => {
+  console.log('The popstate event occured in testing.js!');
+});
+
 // if (window.location.href.includes('index.html')) {
 //   window.location.reload('/CPA-Web-App-Project/index.html');
 // }
