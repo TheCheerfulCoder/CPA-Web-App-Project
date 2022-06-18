@@ -1,3 +1,6 @@
+window.history.pushState({}, '', '');
+window.history.pushState({}, '', '');
+
 window.addEventListener('popstate', event => {
   console.log('The popstate event occured in dashboard.js!');
 });
