@@ -1,8 +1,7 @@
 window.history.pushState({}, '', '');
-window.history.pushState({}, '', '');
 
 window.addEventListener('popstate', event => {
-  console.log('The popstate event occured in dashboard.js!');
+  window.location.href = '/CPA-Web-App-Project/index.html';
 });
 
 const ctx = document.getElementById('myChart');

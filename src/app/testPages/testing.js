@@ -1,11 +1,3 @@
-/* If the current URL includes "index.html", then user has pressed the back
-button after completing the quiz, so reload the home page. */
-// console.log(window.location.href.includes('index.html'));
-
-// if (window.location.href.includes('index.html')) {
-//   window.location.reload('/CPA-Web-App-Project/index.html');
-// }
-
 const question = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
 const progressText = document.getElementById('progressText');
@@ -21,7 +13,8 @@ const MAX_QUESTIONS = parseInt(localStorage.getItem('testLength'));
 // Initialize or fetch the "testScores" object that holds all test score data
 let testScores = {};
 
-// Fetch the questions from the "/assets/questions.json" file and store them in "questions"
+// Fetch the questions from the "/assets/questions.json" file and store them in
+// "questions"
 fetch('../questions.json')
   .then((res) => {
     return res.json();
@@ -137,7 +130,6 @@ choices.forEach((choice) => {
       nextQuestionButton.classList.toggle('button-disabled');
       const viewMyPerformance = document.getElementById('next-question');
       viewMyPerformance.onclick = function RedirectToPerformance() {
-        // history.replaceState({}, '', '/CPA-Web-App-Project/index.html');
         window.location.href = '/CPA-Web-App-Project/dashboard/dashboard.html';
       };
     } else {
