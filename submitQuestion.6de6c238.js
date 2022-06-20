@@ -118,6 +118,9 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"homepage/submitQuestion.js":[function(require,module,exports) {
+var thankYouModal = document.getElementById('modal');
+var backDrop = document.getElementById('backdrop');
+
 function sendQuestion(params) {
   var tempParams = {
     question: document.getElementById('question').value,
@@ -129,6 +132,8 @@ function sendQuestion(params) {
     explanation: document.getElementById('explanation').value
   };
   emailjs.send('service_7i1gahp', 'template_uloxhxu', tempParams).then(function (res) {
+    modal.classList.toggle('visible');
+    backDrop.classList.toggle('visible');
     console.log('success', res.status);
   });
 }
