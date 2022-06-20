@@ -1,3 +1,6 @@
+const thankYouModal = document.getElementById('modal');
+const backDrop = document.getElementById('backdrop');
+
 function sendQuestion(params) {
   const tempParams = {
     question: document.getElementById('question').value,
@@ -10,7 +13,9 @@ function sendQuestion(params) {
   };
 
   emailjs.send('service_7i1gahp', 'template_uloxhxu', tempParams)
-  .then(function(res){  
+  .then(function(res){
+    modal.classList.toggle('visible');
+    backDrop.classList.toggle('visible');
     console.log('success', res.status);
   })
 }

@@ -13,6 +13,17 @@
 })();</script>
 </head>
 <body>
+  <div id="backdrop"></div>
+  <div class="modal" id="modal">
+    <p>
+      Thank you for submitting a question! Your contribution is very much
+      appreciated.
+    </p>
+    <br>
+    <p>After it gets reviewed, it will start to show up in everyone's tests.</p>
+    <br>
+    <a href="/CPA-Web-App-Project/index.html" class="button">Back to Homepage</a>
+  </div>
   <div class="container">
     <div id="home" class="flex-center flex-column question-form">
       <h1 id="header">Question Form</h1>
@@ -21,7 +32,7 @@
       <textarea id="choiceTwo" rows="3" cols="60" name="text" placeholder="Enter choice two"></textarea>
       <textarea id="choiceThree" rows="3" cols="60" name="text" placeholder="Enter choice three"></textarea>
       <textarea id="choiceFour" rows="3" cols="60" name="text" placeholder="Enter choice four"></textarea>
-      <textarea id="answer" rows="2" cols="60" name="text" placeholder="Enter the correct choice number"></textarea>
+      <textarea id="answer" rows="2" cols="60" name="text" placeholder="Enter correct choice number"></textarea>
       <textarea id="explanation" rows="5" cols="60" name="text" placeholder="Enter an explanation"></textarea>
       <button id="sendQuestion" class="button">Send Question</button>
     </div>
