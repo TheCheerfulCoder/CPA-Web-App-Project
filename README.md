@@ -28,9 +28,9 @@ If you notice that any particular question can be improved, we welcome your crit
 
 ### How Do I Improve the Source Code On GitHub?
 
-We welcome people of any skill level to contribute to our source code. Below, I list out the following steps to set up your environment and contribute.
+We welcome people of any skill level to contribute to our source code. Before you begin, you will need to have node.js installed on your device along with the Prettier code extension in Visual Studio Code. Below is a list of steps on how to contribute.
 
-**Step 1: **
-Insert step one here.
+[This section is currently under construction]
 
 ## License
+Licensed under the [MIT license](LICENSE).
