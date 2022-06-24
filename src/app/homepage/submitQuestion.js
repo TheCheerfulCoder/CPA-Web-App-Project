@@ -47,6 +47,19 @@ window.addEventListener('beforeunload', function (e) {
 });
 
 function sendQuestion(params) {
+  if (
+    question === '' ||
+    choiceOne === '' ||
+    choiceTwo === '' ||
+    choiceThree === '' ||
+    choiceFour === '' ||
+    answer === '' ||
+    explanation === ''
+  ) {
+    alert('Please fill out all text boxes before submitting the question.');
+    return;
+  }
+
   const tempParams = {
     question: document.getElementById('question').value,
     choiceOne: document.getElementById('choiceOne').value,
