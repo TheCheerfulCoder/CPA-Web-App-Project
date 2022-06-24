@@ -115,9 +115,15 @@ displayMissedQuestions = () => {
   for (missedQuestion of missedQuestionsArray) {
     questionID = missedQuestion[0];
     timesMissed = missedQuestion[1];
-    questionPreview =
+    questionLength = loadedQuestions[Number(questionID)].question.length;
+
+    if (questionLength > 40) {
+      questionPreview =
       loadedQuestions[Number(questionID)].question.substring(0, 40).trim() +
       '...';
+    } else {
+      questionPreview = loadedQuestions[Number(questionID)].question;
+    }
 
     list.innerHTML += `
             <div class="button parent" id="${questionID}">
