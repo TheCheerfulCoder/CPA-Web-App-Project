@@ -1,1 +1,42 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Send Question</title><link rel="stylesheet" href="/app.0a344fe7.css"><script src="/submitQuestion.2b05b08e.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script><script>emailjs.init("");</script></head><body> <div id="backdrop"></div> <div class="modal" id="modal"> <p> Thank you for submitting a question! Your contribution is very much appreciated. </p> <br> <p>After it gets reviewed, it will start to show up in everyone's tests.</p> <br> <a href="/index.html" class="button">Back to Homepage</a> </div> <div class="container"> <div id="home" class="flex-center flex-column question-form"> <h1 id="header">Question Form</h1> <textarea id="question" rows="5" cols="60" name="text" placeholder="Enter a question"></textarea> <textarea id="choiceOne" rows="3" cols="60" name="text" placeholder="Enter choice one"></textarea> <textarea id="choiceTwo" rows="3" cols="60" name="text" placeholder="Enter choice two"></textarea> <textarea id="choiceThree" rows="3" cols="60" name="text" placeholder="Enter choice three"></textarea> <textarea id="choiceFour" rows="3" cols="60" name="text" placeholder="Enter choice four"></textarea> <textarea id="answer" rows="2" cols="60" name="text" placeholder="Enter correct choice number"></textarea> <textarea id="explanation" rows="5" cols="60" name="text" placeholder="Enter an explanation"></textarea> <button id="sendQuestion" class="button">Send Question</button> </div> </div> </body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Send Question</title>
+  <link rel="stylesheet" href="/app.69a05aa6.css">
+  <script src="/submitQuestion.6de6c238.js" defer=""></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>(function () {
+  emailjs.init('');
+})();</script>
+</head>
+<body>
+  <div id="backdrop"></div>
+  <div class="modal" id="modal">
+    <p>
+      Thank you for submitting a question! Your contribution is very much
+      appreciated.
+    </p>
+    <br>
+    <p>After it gets reviewed, it will start to show up in everyone's tests.</p>
+    <br>
+    <a href="/index.html" class="button">Back to Homepage</a>
+  </div>
+  <div class="container">
+    <div id="home" class="flex-center flex-column question-form">
+      <h1 id="header">Question Form</h1>
+      <textarea id="question" rows="5" cols="60" name="text" placeholder="Enter a question"></textarea>
+      <textarea id="choiceOne" rows="3" cols="60" name="text" placeholder="Enter choice one"></textarea>
+      <textarea id="choiceTwo" rows="3" cols="60" name="text" placeholder="Enter choice two"></textarea>
+      <textarea id="choiceThree" rows="3" cols="60" name="text" placeholder="Enter choice three"></textarea>
+      <textarea id="choiceFour" rows="3" cols="60" name="text" placeholder="Enter choice four"></textarea>
+      <textarea id="answer" rows="2" cols="60" name="text" placeholder="Enter correct choice number"></textarea>
+      <textarea id="explanation" rows="5" cols="60" name="text" placeholder="Enter an explanation"></textarea>
+      <button id="sendQuestion" class="button">Send Question</button>
+    </div>
+  </div>
+  
+</body>
+</html>
