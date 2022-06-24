@@ -1,14 +1,14 @@
 window.history.pushState({}, '', '');
 
-window.addEventListener('popstate', event => {
-  window.location.href = '/CPA-Web-App-Project/index.html';
+window.addEventListener('popstate', (event) => {
+  window.location.href = '/index.html';
 });
 
 const ctx = document.getElementById('myChart');
 
 const viewMissedQuestion = (questionID) => {
   localStorage.setItem('studyQuestionID', questionID);
-  window.location.href = '/CPA-Web-App-Project/dashboard/viewMissedQuestion.html';
+  window.location.href = '/dashboard/viewMissedQuestion.html';
 };
 
 // Get key names of the most recent six tests.

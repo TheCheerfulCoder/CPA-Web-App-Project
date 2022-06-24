@@ -18,7 +18,7 @@ There are three ways to contribute to this project: you can submit a question th
 
 ### How Do I Submit a Question?
 
-The easiest way is to go to _____, click on the "Help Out" button, and then click on "Send a Question" where you will be prompted with a form to create and submit a new question. 
+The easiest way is to go to _____ where you will be prompted with a form to create and submit a new question. 
 
 If you want to, you can also create a pull request to insert the question(s) directly into the code in the "questions.json" file via GitHub.
 
