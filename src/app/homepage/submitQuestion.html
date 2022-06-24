@@ -29,13 +29,13 @@
   <div class="container">
     <div id="home" class="flex-center flex-column question-form" id="card">
       <h1 id="header">Question Form</h1>
-      <textarea id="question" rows="5" cols="60" name="text" placeholder="Enter a question"></textarea>
-      <textarea id="choiceOne" rows="3" cols="60" name="text" placeholder="Enter choice one"></textarea>
-      <textarea id="choiceTwo" rows="3" cols="60" name="text" placeholder="Enter choice two"></textarea>
-      <textarea id="choiceThree" rows="3" cols="60" name="text" placeholder="Enter choice three"></textarea>
-      <textarea id="choiceFour" rows="3" cols="60" name="text" placeholder="Enter choice four"></textarea>
-      <textarea id="answer" rows="2" cols="60" name="text" placeholder="Enter correct choice number"></textarea>
-      <textarea id="explanation" rows="5" cols="60" name="text" placeholder="Enter an explanation"></textarea>
+      <textarea id="question" rows="5" cols="60" name="text" placeholder="Enter a question" onchange="updateQuestion()"></textarea>
+      <textarea id="choiceOne" rows="3" cols="60" name="text" placeholder="Enter choice one" onchange="updateChoiceOne()"></textarea>
+      <textarea id="choiceTwo" rows="3" cols="60" name="text" placeholder="Enter choice two" onchange="updateChoiceTwo()"></textarea>
+      <textarea id="choiceThree" rows="3" cols="60" name="text" placeholder="Enter choice three" onchange="updateChoiceThree()"></textarea>
+      <textarea id="choiceFour" rows="3" cols="60" name="text" placeholder="Enter choice four" onchange="updateChoiceFour()"></textarea>
+      <textarea id="answer" rows="2" cols="60" name="text" placeholder="Enter correct choice number" onchange="updateAnswer()"></textarea>
+      <textarea id="explanation" rows="5" cols="60" name="text" placeholder="Enter an explanation" onchange="updateExplanation()"></textarea>
       <a id="sendQuestion" class="button">Send Question</a>
     </div>
   </div>

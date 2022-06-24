@@ -120,6 +120,48 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"homepage/submitQuestion.js":[function(require,module,exports) {
 var thankYouModal = document.getElementById('modal');
 var backDrop = document.getElementById('backdrop');
+question = '';
+choiceOne = '';
+choiceTwo = '';
+choiceThree = '';
+choiceFour = '';
+answer = '';
+explanation = '';
+
+updateQuestion = function updateQuestion() {
+  question = document.getElementById('question').value;
+};
+
+updateChoiceOne = function updateChoiceOne() {
+  choiceOne = document.getElementById('choiceOne').value;
+};
+
+updateChoiceTwo = function updateChoiceTwo() {
+  choiceTwo = document.getElementById('choiceTwo').value;
+};
+
+updateChoiceThree = function updateChoiceThree() {
+  choiceThree = document.getElementById('choiceThree').value;
+};
+
+updateChoiceFour = function updateChoiceFour() {
+  choiceFour = document.getElementById('choiceFour').value;
+};
+
+updateAnswer = function updateAnswer() {
+  answer = document.getElementById('answer').value;
+};
+
+updateExplanation = function updateExplanation() {
+  explanation = document.getElementById('explanation').value;
+};
+
+window.addEventListener('beforeunload', function (e) {
+  if (question !== '' || choiceOne !== '' || choiceTwo !== '' || choiceThree !== '' || choiceFour !== '' || answer !== '' || explanation !== '') {
+    e.preventDefault();
+    e.returnValue = '';
+  }
+});
 
 function sendQuestion(params) {
   var tempParams = {
@@ -136,6 +178,13 @@ function sendQuestion(params) {
     backDrop.classList.toggle('visible');
     console.log('success', res.status);
   });
+  question = '';
+  choiceOne = '';
+  choiceTwo = '';
+  choiceThree = '';
+  choiceFour = '';
+  answer = '';
+  explanation = '';
 }
 
 document.getElementById('sendQuestion').addEventListener('click', sendQuestion);
