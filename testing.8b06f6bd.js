@@ -139,7 +139,13 @@ var availableQuestions = [];
 var acceptingAnswers = true;
 var MAX_QUESTIONS = parseInt(localStorage.getItem('testLength')); // Initialize or fetch the "testScores" object that holds all test score data
 
-var testScores = {}; // Fetch the questions from the "/assets/questions.json" file and store them in
+var testScores = {};
+window.addEventListener('beforeunload', function (e) {
+  if (localStorage.getItem('quizInProgress') === 'true') {
+    e.preventDefault();
+    e.returnValue = '';
+  }
+}); // Fetch the questions from the "/assets/questions.json" file and store them in
 // "questions"
 
 fetch('../questions.json').then(function (res) {
@@ -228,7 +234,8 @@ getNewQuestion = function getNewQuestion() {
 
 choices.forEach(function (choice) {
   choice.parentElement.addEventListener('click', function (e) {
-    // Prevent the user from selecting more than one answer
+    localStorage.setItem('quizInProgress', 'true'); // Prevent the user from selecting more than one answer
+
     if (!acceptingAnswers) return;
     acceptingAnswers = false; // Enable the next question button unless we are on the last question.
 
@@ -240,6 +247,7 @@ choices.forEach(function (choice) {
       var viewMyPerformance = document.getElementById('next-question');
 
       viewMyPerformance.onclick = function RedirectToPerformance() {
+        localStorage.setItem('quizInProgress', 'false');
         window.location.href = '/dashboard/dashboard.html';
       };
     } else {
