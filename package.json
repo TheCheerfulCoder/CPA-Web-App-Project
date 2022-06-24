@@ -5,7 +5,7 @@
   "scripts": {
     "cleanup": "rm -r dist && rm -r .cache",
     "dev": "npm run cleanup && mkdir dist && cp src/assets/questions.json dist && parcel src/app/index.html src/app/dashboard/*.html src/app/testPages/*.html src/app/homepage/*.html",
-    "build": "npm run cleanup && mkdir dist && cp src/assets/questions.json dist && parcel build src/app/index.html src/app/dashboard/*.html src/app/testPages/*.html src/app/homepage/*.html",
+    "build": "npm run cleanup && mkdir dist && cp src/assets/questions.json dist && parcel build src/app/index.html src/app/dashboard/*.html src/app/testPages/*.html src/app/homepage/*.html --public-url ./",
     "deploy": "npm run build && git add --all && git commit -m'Deploy' && git push && git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
