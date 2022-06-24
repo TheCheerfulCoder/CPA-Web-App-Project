@@ -126,13 +126,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 window.history.pushState({}, '', '');
 window.addEventListener('popstate', function (event) {
-  window.location.href = '/CPA-Web-App-Project/index.html';
+  window.location.href = '/index.html';
 });
 var ctx = document.getElementById('myChart');
 
 var viewMissedQuestion = function viewMissedQuestion(questionID) {
   localStorage.setItem('studyQuestionID', questionID);
-  window.location.href = '/CPA-Web-App-Project/dashboard/viewMissedQuestion.html';
+  window.location.href = '/dashboard/viewMissedQuestion.html';
 }; // Get key names of the most recent six tests.
 
 
@@ -271,7 +271,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58782" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54795" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -448,4 +448,4 @@ function hmrAcceptRun(bundle, id) {
   }
 }
 },{}]},{},["../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","dashboard/dashboard.js"], null)
-//# sourceMappingURL=/CPA-Web-App-Project/dashboard.4368034f.js.map
+//# sourceMappingURL=/dashboard.4368034f.js.map

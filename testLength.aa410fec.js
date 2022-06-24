@@ -122,7 +122,7 @@ var goToTesting = function goToTesting(num) {
   /* Store the number of quesitons selected by the user in local storage; 
     then send the user to the testing page.*/
   localStorage.setItem('testLength', String(num));
-  window.location.href = '/CPA-Web-App-Project/testPages/testing.html';
+  window.location.href = '/testPages/testing.html';
 }; // Add an event listner for each option the user can select.
 
 
@@ -163,7 +163,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58782" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54795" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -340,4 +340,4 @@ function hmrAcceptRun(bundle, id) {
   }
 }
 },{}]},{},["../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","testPages/testLength.js"], null)
-//# sourceMappingURL=/CPA-Web-App-Project/testLength.aa410fec.js.map
+//# sourceMappingURL=/testLength.aa410fec.js.map

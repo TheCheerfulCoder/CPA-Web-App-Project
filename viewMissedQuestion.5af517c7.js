@@ -227,7 +227,7 @@ getNewQuestion = function getNewQuestion() {
   var viewMyPerformance = document.getElementById('next-question');
 
   viewMyPerformance.onclick = function RedirectToPerformance() {
-    window.location.href = '/CPA-Web-App-Project/dashboard/dashboard.html';
+    window.location.href = '/dashboard/dashboard.html';
   };
 };
 
@@ -246,7 +246,7 @@ choices.forEach(function (choice) {
       var _viewMyPerformance = document.getElementById('next-question');
 
       _viewMyPerformance.onclick = function RedirectToPerformance() {
-        window.location.href = '/CPA-Web-App-Project/dashboard/dashboard.html';
+        window.location.href = '/dashboard/dashboard.html';
       };
     } else {
       // nextQuestionButton.onclick = getNewQuestion;
@@ -255,7 +255,7 @@ choices.forEach(function (choice) {
       var _viewMyPerformance2 = document.getElementById('next-question');
 
       _viewMyPerformance2.onclick = function RedirectToPerformance() {
-        window.location.href = '/CPA-Web-App-Project/dashboard/dashboard.html';
+        window.location.href = '/dashboard/dashboard.html';
       };
     }
 
@@ -350,7 +350,7 @@ function showAnswer() {
 var viewMyPerformance = document.getElementById('next-question');
 
 viewMyPerformance.onclick = function RedirectToPerformance() {
-  window.location.href = '/CPA-Web-App-Project/dashboard/dashboard.html';
+  window.location.href = '/dashboard/dashboard.html';
 };
 
 showAnswerButton.onclick = showAnswer;
@@ -397,7 +397,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58782" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54795" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -574,4 +574,4 @@ function hmrAcceptRun(bundle, id) {
   }
 }
 },{}]},{},["../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","dashboard/viewMissedQuestion.js"], null)
-//# sourceMappingURL=/CPA-Web-App-Project/viewMissedQuestion.5af517c7.js.map
+//# sourceMappingURL=/viewMissedQuestion.5af517c7.js.map
