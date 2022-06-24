@@ -233,7 +233,14 @@ displayMissedQuestions = function displayMissedQuestions() {
     missedQuestion = _missedQuestionsArray[_i];
     questionID = missedQuestion[0];
     timesMissed = missedQuestion[1];
-    questionPreview = loadedQuestions[Number(questionID)].question.substring(0, 40).trim() + '...';
+    questionLength = loadedQuestions[Number(questionID)].question.length;
+
+    if (questionLength > 40) {
+      questionPreview = loadedQuestions[Number(questionID)].question.substring(0, 40).trim() + '...';
+    } else {
+      questionPreview = loadedQuestions[Number(questionID)].question;
+    }
+
     list.innerHTML += "\n            <div class=\"button parent\" id=\"".concat(questionID, "\">\n                <div class=\"child left-child\">").concat(questionPreview, "</div> \n                <div class=\"child\">").concat(timesMissed, "</div> \n            </div>\n        ");
   } // Make each button send the user to the testing page when clicked.
 
