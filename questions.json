@@ -1,52 +1,212 @@
 [
     {
-        "questionID": "00000",
-        "question": "In which film does Luke find out Darth Vader is his father?",
-        "choice1": "A New Hope",
-        "choice2": "The Empire Strikes Back",
-        "choice3": "Return of the Jedi",
-        "choice4": "Attack of the Clones",
-        "answer": 2,
-        "explanation": "It was The Empire Strikes Back."
+      "questionID": "00000",
+      "question": "What would the following SQL query return: 'SELECT Product_Name FROM Product_Table WHERE Product_Category = \"Cereals\"'?",
+      "choice1": "An error because the query does not follow SQL syntax properly.",
+      "choice2": "The product table with all its fields but only with rows that are for cereal products.",
+      "choice3": "A list of all the different products that the company sells.",
+      "choice4": "A list of all the different cereal products that the company sells.",
+      "answer": 4,
+      "explanation": "SQL was designed using English sentence patterns to make it intuitive. \"SELECT Product_Name FROM Product_Table\" returns a column with all the product names. \"WHERE Product_Category = 'Cereals'\" adds the condition to only return product names that have \"Cereals\" as their value in the product category column."
     },
     {
-        "questionID": "00001",
-        "question": "Who is considered to be the most hated character in Star Wars?",
-        "choice1": "Jabba the Hut",
-        "choice2": "Darth Maul",
-        "choice3": "Jar Jar Binx",
-        "choice4": "Anakin Skywalker",
-        "answer": 3,
-        "explanation": "Jar Jar the Sith Lord is the most hated character because he is pure evil."
+      "questionID": "00001",
+      "question": "What is a packet in networking?",
+      "choice1": "A single container that holds all the data sent over a network for a given message.",
+      "choice2": "A small amount of data sent over a network.",
+      "choice3": "A piece of hardware that enables connectivity and communication between devices in a computer network.",
+      "choice4": "A cyber-attack vector that can be exploited by a malicious actor.",
+      "answer": 2,
+      "explanation": "In networking, a packet is a small segment of a larger message. Messages sent over computer networks are divided into packets. These packets are then recombined by the computer that receives them."
     },
     {
-        "questionID": "00002",
-        "question": "According to Yoda, which of these is the path to the Dark Side?",
-        "choice1": "Pain",
-        "choice2": "Hate",
-        "choice3": "Fear",
-        "choice4": "Envy",
-        "answer": 3,
-        "explanation": "\"Fear is the path to the dark side … fear leads to anger …  anger leads to hate … hate leads to suffering.\" — Yoda."
+      "questionID": "00002",
+      "question": "If Alice wants to send a message to Bob using asymmetric encryption, how will she go about doing it?",
+      "choice1": "Alice will (1) encrypt the message using an encryption program, (2) send the encrypted message to Bob, and (3) send Bob the passphrase used to decrypt the message. Alice can decrypt the message once it is encrypted if she wants.",
+      "choice2": "Alice will (1) get Bob's public key, (2) encrypt the message using Bob's public key, and (3) send the encrypted message to bob, who will use his private key to decrypt the message. Even Alice cannot decrypt the message once it is encrypted using Bob's public key.",
+      "choice3": "Alice will (1) encrypt the message using an encryption program, (2) send the encrypted message to Bob, and (3) send Bob the passphrase used to decrypt the message. Even Alice cannot decrypt the message once it is encrypted.",
+      "choice4": "Alice will (1) get Bob's public key, (2) encrypt the message using Bob's public key, and (3) send the encrypted message to bob, who will use his private key to decrypt the message. Alice can decrypt the message once it is encrypted using Bob's public key if she wants.",
+      "answer": 2,
+      "explanation": "In asymmetric encryption, the message receiver uses an algorithm to generate a public and private key. The message receiver shares their public key with the message sender, who will use it to encrypt the message before it is sent. Once the message is encrypted by the sender using the receiver's public key, only the receiver can decrypt it by using their private key."
     },
     {
-        "questionID": "00003",
-        "question": "Who freed Princess Leia from her chains at Jabba's palace?",
-        "choice1": "Luke Skywalker",
-        "choice2": "Han Solo",
-        "choice3": "Chewbacca",
-        "choice4": "R2-D2",
-        "answer": 4,
-        "explanation": "R2-D2 was the one who saved Princess Leia from the chains."
+      "questionID": "00003",
+      "question": "What is a brute-force attack?",
+      "choice1": "When the attacker tries many different passwords until they guess the right one.",
+      "choice2": "When the attacker uses deception to get the victim to reveal sensitive information.",
+      "choice3": "When the attacker threatens to physically assault the victim in hope that they reveal sensitive information.",
+      "choice4": "When the attacker uses many computers to intercept all the individual packets transferred over a network.",
+      "answer": 1,
+      "explanation": "A brute-force attack is simply attempting to guess the right password. Since there are so many different possible combinations, these guesses are typically made repeatedly by a computer in a matter of milliseconds."
     },
     {
-        "questionID": "00004",
-        "question": "Who killed Jango Fett?",
-        "choice1": "Mace Windu",
-        "choice2": "Anakin Skywalker",
-        "choice3": "Yoda",
-        "choice4": "Obi-Wan Kenobi",
-        "answer": 1,
-        "explanation": "Mace Windu was the one who killed Jango Fett."
+      "questionID": "00004",
+      "question": "Which of the following statements are correct?",
+      "choice1": "Application-level gateways typically do not inspect the contents of packets that pass through them.",
+      "choice2": "Firewalls are only used to block malicious programs or code.",
+      "choice3": "There can be software and hardware firewalls.",
+      "choice4": "There are only hardware firewalls.",
+      "answer": 3,
+      "explanation": "Firewalls can be made up of both hardware and software; each serve a different but important purpose. Firewalls are used to do many things such as preventing unauthorized access, blocking malicious programs or code, and preventing employees from accessing restricted sites."
+    },
+    {
+      "questionID": "00005",
+      "question": "What is a DMZ network (sometimes referred to as the demilitarized zone in cybersecurity)?",
+      "choice1": "A network that is completely isolated from the rest of the internet for maximum security.",
+      "choice2": "A network that has it's own custom protocol so that hackers cannot attack it.",
+      "choice3": "A perimeter network that adds an extra layer of security to an organization's internal network.",
+      "choice4": "A network that most hackers agree not to attack in order to prevent complete chaos that would wreck havoc on the internet.",
+      "answer": 3,
+      "explanation": "A DMZ Network is a perimeter network that protects and adds an extra layer of security to an organization's internal local-area network. A common DMZ is a subnetwork that sits between the public internet and private networks."
+    },
+    {
+      "questionID": "00006",
+      "question": "which of the following is true about Electronic Data Interchange (EDI)?",
+      "choice1": "EDI is the communication of business information, most commonly purchase orders and invoices, between computers using a standardized format.",
+      "choice2": "EDI requires that there be no manual steps in the process of interchanging data.",
+      "choice3": "The process normally takes between three and five business days.",
+      "choice4": "The business that receives a purchase order through an EDI is required to physically mail an acknowledgment that it was received.",
+      "answer": 1,
+      "explanation": "This is the correct definition of EDI. The complete elimination of all manual steps is not necessary for EDI because sometimes it is impractical to do so. The point of EDI is that it reduces the time and money it takes to exchange information. The standard EDI process normally takes less than an hour."
+    },
+    {
+      "questionID": "00007",
+      "question": "What is the difference between pharming and phishing?",
+      "choice1": "The end goal of pharming is to harm the victim of the hacking while the end goal of phishing is to acquire sensitive information.",
+      "choice2": "Phishing is harder for the hacker to pull off than pharming.",
+      "choice3": "Phishing involves fake websites that imitate the real thing while pharming does not use fake websites.",
+      "choice4": "Phishing is done by deceiving the victim into clicking on a malicious link while pharming modifies a legitimate website and redirects all its traffic to a malicious website.",
+      "answer": 4,
+      "explanation": "The end goal of a pharming or phishing is to acquire sensitive information regardless of whether it harms the victim. Pharming is harder to pull off that phishing because the hacker needs to manipulate actual code. Pharming always involves faked websites since the hacker is redirecting traffic from a legitimate one. "
+    },
+    {
+      "questionID": "00008",
+      "question": "Application programmers and systems analysts work under which function of IT governance?",
+      "choice1": "Systems administration and maintenance",
+      "choice2": "Computer operations",
+      "choice3": "Applications development",
+      "choice4": "All the above",
+      "answer": 3,
+      "explanation": "Systems analysts work at a high level to determine what the application should do. Application programmers are concerned with the actual implementation of requirements determined by systems analysts. Both of these roles revolve around application development."
+    },
+    {
+      "questionID": "00009",
+      "question": "Why shouldn't a system administrator be able to push code changes to an enterprise application like an application programmer could?",
+      "choice1": "Because the systems administrator does not know what changes should be made to the code base.",
+      "choice2": "Because the systems administrator typically focuses on the actual implementation of an application rather than its creation.",
+      "choice3": "Because the systems administrator is working with code that is running live in production, they should not be allowed to modify the code base.",
+      "choice4": "Because the systems administrator does not have the technical knowledge necessary to make the changes.",
+      "answer": 3,
+      "explanation": "A programmer who can make changes in a development environment should not be allowed to deploy those changes into production. Like the scenario in this problem, the opposite is also true: a person who can deploy changes to production should not be allowed to make changes in the development environment. With this separation of duties, fraud is only possible if (a) these two roles collude or (b) malicious code created by the programmer fails to get caught before it is put into production."
+    },
+    {
+      "questionID": "00010",
+      "question": "How does the system programmer and application programmer fit into an IT governance hierarchy?",
+      "choice1": "The application programmer works under the direction of the system analyst.",
+      "choice2": "The application programmer works under the direction of the system programmer.",
+      "choice3": "The system programmer works under the direction of the system analyst.",
+      "choice4": "The system programmer works under the direct supervision of the application programmer.",
+      "answer": 1,
+      "explanation": "Systems programmers build platforms for application programmers to build their applications such as operating systems. Typically, systems programmers are only hired by companies like Microsoft, Google, and Apple. Most businesses hire application programmers that build software for the end user; these application programmers work under the guidance of the systems analyst."
+    },
+    {
+      "questionID": "00011",
+      "question": "Which of the following roles is not part of systems programming and maintenance?",
+      "choice1": "The Web administrator",
+      "choice2": "Help desk personal",
+      "choice3": "The systems analyst",
+      "choice4": "The network administrator",
+      "answer": 3,
+      "explanation": "The systems analyst works with the application programmer to build applications, not to maintain existing systems."
+    },
+    {
+      "questionID": "00012",
+      "question": "Which of the following job titles is NOT part of applications development?",
+      "choice1": "Computer programmer",
+      "choice2": "Application programmer",
+      "choice3": "System programmer/engineer",
+      "choice4": "Software engineer",
+      "answer": 3,
+      "explanation": "Systems programmers work between the hardware and the application programmers. Typically, due to the extremely high costs of building these systems in house, systems programmers are only hired by companies like Microsoft, Google, and Apple."
+    },
+    {
+      "questionID": "00013",
+      "question": "If a company's plan includes fast recovery with no down-time, they are likely to have a",
+      "choice1": "Cold site",
+      "choice2": "Hot site",
+      "choice3": "Warm site",
+      "choice4": "Cool site",
+      "answer": 2,
+      "explanation": "Hot sites include the hardware, software, and data necessary to start running immediately after disaster occurs."
+    },
+    {
+      "questionID": "00014",
+      "question": "In the event of a disaster that makes the company's facilities unusable, Leo, the controller, has arranged for the use of an alternate location to be used as a data processing disaster recovery site but has not been stocked with equipment. Which of the following recovery plans would best describe this arrangement?",
+      "choice1": "Warm site",
+      "choice2": "Hot site",
+      "choice3": "Cool site",
+      "choice4": "Cold site",
+      "answer": 4,
+      "explanation": "If it is not stocked with equipment, it is a cold site."
+    },
+    {
+      "questionID": "00015",
+      "question": "Regarding disaster recovery planning, which of the following best describes a warm site?",
+      "choice1": "A facility with only electrical power on site and no computer equipment.",
+      "choice2": "A facility with equipment that is available onsite but still require configuration and restoration of data files in order to resume processing.",
+      "choice3": "A facility that is is fully operational with the necessary hardware, software, and data.",
+      "choice4": "A facility on a mobile truck bed that has only electrical power but no equipment.",
+      "answer": 2,
+      "explanation": "If it is stocked with equipment but still requires data and configuration, it is a warm site."
+    },
+    {
+      "questionID": "00016",
+      "question": "Ciphertext is best described as",
+      "choice1": "Unencrypted data",
+      "choice2": "Unicode text",
+      "choice3": "Plaintext",
+      "choice4": "Encrypted text",
+      "answer": 4,
+      "explanation": "Ciphertext is encrypted text transformed from plaintext using an encryption algorithm."
+    },
+    {
+      "questionID": "00017",
+      "question": "Symmetric encryption is typically",
+      "choice1": "More complex than asymmetric encryption.",
+      "choice2": "Less complex than asymmetric encryption.",
+      "choice3": "More computationally expensive than asymmetric encryption.",
+      "choice4": "More secure than asymmetric encryption.",
+      "answer": 2,
+      "explanation": "Asymmetric encryption is the common method used today because it is more secure; however, it is more computationally expensive and more complex because of this."
+    },
+    {
+      "questionID": "00018",
+      "question": "A public key certificate",
+      "choice1": "Can be digitally created and signed by anyone.",
+      "choice2": "Certify the identity of the owners of a private key.",
+      "choice3": "Are always freely provided in an effort democratize the web.",
+      "choice4": "Certifies the identity of the owners of a public key.",
+      "answer": 4,
+      "explanation": "Digital certificates are electronic documents that are created and digitally signed by a certificate authority (CA). These certificates certify an individual or entity as the owners of a public key."
+    },
+    {
+      "questionID": "00019",
+      "question": "Which of the following is true about IT governance frameworks?",
+      "choice1": "They are not comprehensive.",
+      "choice2": "They can only be used individually.",
+      "choice3": "They provide structure for organizations to ensure that IT investments support business objectives.",
+      "choice4": "They only provide structure for organizations to ensure that IT controls are functioning effectively.",
+      "answer": 3,
+      "explanation": "An IT governance framework is a high level guide that can be used to ensure the effective and efficient use of IT which enables an organization to achieve it's goals."
+    },
+    {
+      "questionID": "00020",
+      "question": "Which of the following statements is incorrect about the different types of IT risks?",
+      "choice1": "Compliance risk is the risk that IT does not meet the requirements of regulatory bodies.",
+      "choice2": "Security risk is the risk of unauthorized access or use of an organization's information technology.",
+      "choice3": "Operational risk is the risk that IT objectives are misaligned with business strategy.",
+      "choice4": "Financial risk is the risk of losing financial resources related to IT.",
+      "answer": 3,
+      "explanation": "Operational risk is the risk that an organization is unable to operate effectively or efficiently due to IT issues. Strategic risk is the risk that IT objectives are misaligned with business strategy. All the other statements are correct."
     }
-]
+  ]
