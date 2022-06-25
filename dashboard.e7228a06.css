@@ -1,0 +1,118 @@
+.title {
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.055);
+  /* margin-bottom: 0; */
+}
+
+h1 {
+  /* margin-bottom: -.25rem;
+    margin-top: -.25rem; */
+  padding: 1rem;
+  /* line-height: 2.25rem; */
+  margin-bottom: 0;
+  /* font-size: 250%; */
+}
+
+table {
+  width: 80vw;
+}
+
+tr:not(:first-of-type):hover {
+  cursor: pointer;
+  transform: translateY(-0.15rem);
+  transition: transform 150ms;
+}
+
+table,
+th,
+td {
+  border: 0.25px rgb(19, 16, 16);
+  border-collapse: collapse;
+}
+
+canvas {
+  width: 80vw;
+  margin: 0.5rem;
+  margin-top: 1rem;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+caption {
+  padding-bottom: 1rem;
+}
+
+.card {
+  width: 85vw;
+}
+
+.bottom {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.top {
+  margin-top: 4rem;
+}
+
+.parent {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.child {
+  padding: .75rem;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  font-size: smaller;
+}
+
+.left-child {
+  width: 100%;
+}
+
+.button {
+  margin-top: 0rem;
+  margin-left: 0rem;
+  text-align: left;
+  padding: 0rem;
+  height: 5rem;
+  font-size: 85%;
+}
+
+.button:last-of-type {
+  margin-bottom: 0;
+}
+
+.table-header {
+  font-size: 110%;
+}
+
+.list {
+  padding: .5rem;
+  max-height: 300px; /* Change to 400. */
+  overflow-y: scroll;
+}
+
+.lineChart {
+  position: relative;
+  height: 75vh;
+  width: 80vw;
+}
+
+@media (min-width: 800px) {
+  .parent {
+    width: 75vw;
+  }
+
+  .left-child {
+    width: 50%;
+  }
+}
+
+/*# sourceMappingURL=/dashboard.e7228a06.css.map */
