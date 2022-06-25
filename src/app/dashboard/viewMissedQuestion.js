@@ -118,7 +118,7 @@ getNewQuestion = () => {
 
   const viewMyPerformance = document.getElementById('next-question');
   viewMyPerformance.onclick = function RedirectToPerformance() {
-    window.location.href = 'dashboard/dashboard.html';
+    window.location.href = 'dashboard.html';
   };
 };
 

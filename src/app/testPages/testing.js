@@ -140,7 +140,7 @@ choices.forEach((choice) => {
       const viewMyPerformance = document.getElementById('next-question');
       viewMyPerformance.onclick = function RedirectToPerformance() {
         localStorage.setItem('quizInProgress', 'false');
-        window.location.href = 'dashboard/dashboard.html';
+        window.location.href = '../dashboard/dashboard.html';
       };
     } else {
       nextQuestionButton.onclick = getNewQuestion;
