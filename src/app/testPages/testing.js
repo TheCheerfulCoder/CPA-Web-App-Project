@@ -127,7 +127,7 @@ getNewQuestion = () => {
 choices.forEach((choice) => {
   choice.parentElement.addEventListener('click', (e) => {
     localStorage.setItem('quizInProgress', 'true');
-  
+
     // Prevent the user from selecting more than one answer
     if (!acceptingAnswers) return;
     acceptingAnswers = false;
@@ -140,7 +140,7 @@ choices.forEach((choice) => {
       const viewMyPerformance = document.getElementById('next-question');
       viewMyPerformance.onclick = function RedirectToPerformance() {
         localStorage.setItem('quizInProgress', 'false');
-        window.location.href = '/dashboard/dashboard.html';
+        window.location.href = 'dashboard/dashboard.html';
       };
     } else {
       nextQuestionButton.onclick = getNewQuestion;

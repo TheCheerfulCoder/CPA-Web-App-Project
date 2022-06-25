@@ -1,14 +1,14 @@
 window.history.pushState({}, '', '');
 
 window.addEventListener('popstate', (event) => {
-  window.location.href = '/index.html';
+  window.location.href = 'index.html';
 });
 
 const ctx = document.getElementById('myChart');
 
 const viewMissedQuestion = (questionID) => {
   localStorage.setItem('studyQuestionID', questionID);
-  window.location.href = '/dashboard/viewMissedQuestion.html';
+  window.location.href = 'dashboard/viewMissedQuestion.html';
 };
 
 // Get key names of the most recent six tests.
@@ -119,8 +119,8 @@ displayMissedQuestions = () => {
 
     if (questionLength > 40) {
       questionPreview =
-      loadedQuestions[Number(questionID)].question.substring(0, 40).trim() +
-      '...';
+        loadedQuestions[Number(questionID)].question.substring(0, 40).trim() +
+        '...';
     } else {
       questionPreview = loadedQuestions[Number(questionID)].question;
     }
