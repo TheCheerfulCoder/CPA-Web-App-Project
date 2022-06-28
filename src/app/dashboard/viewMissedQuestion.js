@@ -144,7 +144,7 @@ choices.forEach((choice) => {
       // nextQuestionButton.classList.toggle('button-disabled');
       const viewMyPerformance = document.getElementById('next-question');
       viewMyPerformance.onclick = function RedirectToPerformance() {
-        window.location.href = 'dashboard/dashboard.html';
+        window.location.href = 'dashboard.html';
       };
     } else {
       // nextQuestionButton.onclick = getNewQuestion;
