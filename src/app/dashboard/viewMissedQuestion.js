@@ -1,3 +1,9 @@
+window.history.pushState({}, '', '');
+
+window.addEventListener('popstate', (event) => {
+  window.location.href = 'dashboard.html';
+});
+
 const question = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
 const progressText = document.getElementById('progressText');

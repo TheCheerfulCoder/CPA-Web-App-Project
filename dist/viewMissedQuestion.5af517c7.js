@@ -130,6 +130,10 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
+window.history.pushState({}, '', '');
+window.addEventListener('popstate', function (event) {
+  window.location.href = 'dashboard.html';
+});
 var question = document.getElementById('question');
 var choices = Array.from(document.getElementsByClassName('choice-text'));
 var progressText = document.getElementById('progressText');
