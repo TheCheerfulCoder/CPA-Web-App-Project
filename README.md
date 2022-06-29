@@ -10,21 +10,21 @@ The AICPA, the organization responsible for creating the CPA exams, started to i
 
 ## How Can I Use the Application?
 
-You can start your studying by visiting _____.
+You can start your studying by visiting [quizbecit.com](https://quizbecit.com/index.html).
 
 ## How Can I Contribute?
 
-There are three ways to contribute to this project: you can submit a question that other users can study, improve the source code on GitHub, and donate through _____.
+There are three ways to contribute to this project: you can submit a question that other users can study, improve the source code on GitHub, and donate through [PayPal](https://www.paypal.com/donate/?hosted_button_id=M2K3LBXCS6GCJ).
 
 ### How Do I Submit a Question?
 
-The easiest way is to go to _____ where you will be prompted with a form to create and submit a new question. 
+The easiest way is to go to [the question form page](https://quizbecit.com/homepage/submitQuestion.html) where you will be prompted with a form to create and submit a new question. 
 
 If you want to, you can also create a pull request to insert the question(s) directly into the code in the "questions.json" file via GitHub.
 
 In order to complete the project's objective, it is imperative that our question base is filled with quality questions that are relevant, accurate, and understandable. Because of this, every submitted question will be reviewed and adjusted to meet these standards if necessary.
 
-If you notice that any particular question can be improved, we welcome your critical eye. Don't hesitate to create an issue in GitHub or send an email to _____. 
+If you notice that any particular question can be improved, we welcome your critical eye. Don't hesitate to create an issue in GitHub or send an email to *itpracticetests@gmail.com*. 
 
 ### How Do I Improve the Source Code On GitHub?
 
