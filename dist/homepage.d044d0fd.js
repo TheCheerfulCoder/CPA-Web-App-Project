@@ -158,7 +158,7 @@ var emailQuestionsReminder = new Reminder();
 
 if (totalQuestionsAnswered <= 60 && totalQuestionsAnswered >= 30) {
   if (localStorage.getItem('sendQuestionReminder') !== 'sent') {
-    emailQuestionsReminder.display("Congrats on completing ".concat(totalQuestionsAnswered, " questions!\uD83E\uDD73 \n      When studying a subject, it often helps to teach others. You can submit a\n      question by clicking the \"Help Out\" button."));
+    emailQuestionsReminder.display("Congrats on completing ".concat(totalQuestionsAnswered, " questions!\uD83E\uDD73 \n      When studying a subject, it helps to teach others. You can submit a\n      question by clicking the \"Help Out\" button."));
     localStorage.setItem('sendQuestionReminder', 'sent');
   }
 }

@@ -7,13 +7,13 @@ const goToTesting = (num) => {
 
 // Add an event listner for each option the user can select.
 document.getElementById('choice1').addEventListener('click', () => {
-  goToTesting(1);
+  goToTesting(5);
 });
 
 document.getElementById('choice2').addEventListener('click', () => {
-  goToTesting(2);
+  goToTesting(10);
 });
 
 document.getElementById('choice3').addEventListener('click', () => {
-  goToTesting(3);
+  goToTesting(15);
 });

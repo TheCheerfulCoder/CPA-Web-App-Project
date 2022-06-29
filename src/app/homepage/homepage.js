@@ -26,7 +26,7 @@ if (totalQuestionsAnswered <= 60 && totalQuestionsAnswered >= 30) {
   if (localStorage.getItem('sendQuestionReminder') !== 'sent') {
     emailQuestionsReminder.display(
       `Congrats on completing ${totalQuestionsAnswered} questions!🥳 
-      When studying a subject, it often helps to teach others. You can submit a
+      When studying a subject, it helps to teach others. You can submit a
       question by clicking the "Help Out" button.`,
     );
     localStorage.setItem('sendQuestionReminder', 'sent');
