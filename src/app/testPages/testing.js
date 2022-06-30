@@ -211,12 +211,12 @@ choices.forEach((choice) => {
 
         lastKey = testScoresKeys.pop();
 
-        lastTestNumber = lastKey.replace('Test ', '');
+        lastTestNumber = lastKey.replace('Quiz ', '');
 
         currentTestNumber = parseInt(lastTestNumber) + 1;
 
         //   STEP 3: Append the recent test score data to the deserialized object
-        testScoresDeserialized['Test ' + currentTestNumber.toString()] =
+        testScoresDeserialized['Quiz ' + currentTestNumber.toString()] =
           scoreList;
 
         //   STEP 4: Re-serialize the object and put it back into local storage
@@ -224,7 +224,7 @@ choices.forEach((choice) => {
         localStorage.setItem('testScores', testScoresSerialized);
       } else {
         // Add a key value pair to the "testScores" object (e.g. {test 1: [0, 1, 0]})
-        testScores['Test 1'] = scoreList;
+        testScores['Quiz 1'] = scoreList;
 
         // Add testScores to local storage
         let testScoresSerialized = JSON.stringify(testScores);
