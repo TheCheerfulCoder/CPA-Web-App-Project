@@ -105,6 +105,33 @@ caption {
   width: 80vw;
 }
 
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.last-buttons {
+  margin-bottom: 0;
+  width: 70vw;
+}
+
+.left {
+  margin-right: .5rem;
+}
+
+.right {
+  margin-left: .5rem;
+}
+
+.missed-questions-table {
+  margin-top: 1rem;
+}
+
+.last-card {
+  margin-bottom: 4rem;
+}
+
 @media (min-width: 800px) {
   .parent {
     width: 75vw;
@@ -113,6 +140,11 @@ caption {
   .left-child {
     width: 50%;
   }
+
+  .last-buttons {
+    font-size: 110%;
+  }
+
 }
 
 @media (max-width: 424px) {
