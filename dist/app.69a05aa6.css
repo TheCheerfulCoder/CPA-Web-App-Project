@@ -12,7 +12,7 @@ body {
   text-align: center;
   margin: auto;
   padding: 0;
-  background-image: url('/../assets/background.jpg');
+  background-image: url('/background.205e93b3.jpg');
 }
 
 :root {
@@ -205,3 +205,5 @@ textarea {
     font-size: 225%;
   }
 }
+
+/*# sourceMappingURL=/app.69a05aa6.css.map */
