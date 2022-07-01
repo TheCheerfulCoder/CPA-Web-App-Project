@@ -60,6 +60,7 @@ caption {
 
 .parent {
   margin-top: 0.5rem;
+  max-width: none;
   display: flex;
   justify-content: space-between;
 }
