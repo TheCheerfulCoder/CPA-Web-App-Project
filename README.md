@@ -30,7 +30,11 @@ If you notice that any particular question can be improved, we welcome your crit
 
 We welcome people of any skill level to contribute to our source code. Before you begin, you will need to have node.js installed on your device along with the Prettier code extension in Visual Studio Code. Below is a list of steps on how to contribute.
 
-[This section is currently under construction]
+1. Fork this repository.
+2. Create a branch.
+3. Make your changes and commit them.
+4. Push to the original branch.
+5. Create a pull request.
 
 ## License
 Licensed under the [MIT license](LICENSE).
