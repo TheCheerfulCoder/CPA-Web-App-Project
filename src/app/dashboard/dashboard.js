@@ -66,8 +66,6 @@ const myChart = new Chart(ctx, {
   },
 });
 
-// window.addEventListener('resize', () => { location.reload() });
-
 // Fetch the data from /assets/questions.json
 fetch('../questions.json')
   .then(function (resp) {
