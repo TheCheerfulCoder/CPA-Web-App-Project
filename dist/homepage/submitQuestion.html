@@ -1,1 +1,69 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" href="../icon.fac2514b.png"><title>Send Question</title><link rel="stylesheet" href="../loader.bbb55e6a.css"><script src="../loader.a8eb28b8.js"></script><link rel="stylesheet" href="../app.bbd0614a.css"><script src="../submitQuestion.2f633981.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script><script>emailjs.init("");</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-D36DPK7B4S"></script><script>function a(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],a("js",new Date),a("config","G-D36DPK7B4S");</script></head><body> <div class="loader-wrapper"> <div class="loader"> <span class="loader-block"></span> <span class="loader-block"></span> <span class="loader-block"></span> <span class="loader-block"></span> <span class="loader-block"></span> <span class="loader-block"></span> <span class="loader-block"></span> <span class="loader-block"></span> <span class="loader-block"></span> </div> </div> <div id="backdrop"></div> <div class="modal" id="modal"> <p> Thank you for submitting a question! Your contribution is very much appreciated. </p> <br> <p> After it gets reviewed, it will start to show up in everyone's tests. </p> <br> <a href="../index.html" class="button">Back to Homepage</a> </div> <div class="container"> <div id="home" class="flex-center flex-column question-form"> <h1 id="header">Question Form</h1> <textarea id="question" rows="5" cols="60" name="text" placeholder="Enter a question" onchange="updateQuestion()"></textarea> <textarea id="choiceOne" rows="3" cols="60" name="text" placeholder="Enter choice one" onchange="updateChoiceOne()"></textarea> <textarea id="choiceTwo" rows="3" cols="60" name="text" placeholder="Enter choice two" onchange="updateChoiceTwo()"></textarea> <textarea id="choiceThree" rows="3" cols="60" name="text" placeholder="Enter choice three" onchange="updateChoiceThree()"></textarea> <textarea id="choiceFour" rows="3" cols="60" name="text" placeholder="Enter choice four" onchange="updateChoiceFour()"></textarea> <textarea id="answer" rows="2" cols="60" name="text" placeholder="Enter correct choice number" onchange="updateAnswer()"></textarea> <textarea id="explanation" rows="5" cols="60" name="text" placeholder="Enter an explanation" onchange="updateExplanation()"></textarea> <a id="sendQuestion" class="button">Send Question</a> </div> </div> </body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/icon.7b8f86b4.png">
+    <title>Send Question</title>
+    <link rel="stylesheet" href="/loader.ed82d282.css">
+    <script src="/loader.6acb1072.js"></script>
+    <link rel="stylesheet" href="/app.69a05aa6.css">
+    <script src="/submitQuestion.6de6c238.js" defer=""></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>(function () {
+  emailjs.init('');
+})();</script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-D36DPK7B4S"></script>
+    <script>window.dataLayer = window.dataLayer || [];
+
+function gtag() {
+  dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+gtag('config', 'G-D36DPK7B4S');</script>
+  </head>
+  <body>
+    <div class="loader-wrapper">
+      <div class="loader">
+        <span class="loader-block"></span>
+        <span class="loader-block"></span>
+        <span class="loader-block"></span>
+        <span class="loader-block"></span>
+        <span class="loader-block"></span>
+        <span class="loader-block"></span>
+        <span class="loader-block"></span>
+        <span class="loader-block"></span>
+        <span class="loader-block"></span>
+      </div>
+    </div>
+    <div id="backdrop"></div>
+    <div class="modal" id="modal">
+      <p>
+        Thank you for submitting a question! Your contribution is very much
+        appreciated.
+      </p>
+      <br>
+      <p>
+        After it gets reviewed, it will start to show up in everyone's tests.
+      </p>
+      <br>
+      <a href="/index.html" class="button">Back to Homepage</a>
+    </div>
+    <div class="container">
+      <div id="home" class="flex-center flex-column question-form">
+        <h1 id="header">Question Form</h1>
+        <textarea id="question" rows="5" cols="60" name="text" placeholder="Enter a question" onchange="updateQuestion()"></textarea>
+        <textarea id="choiceOne" rows="3" cols="60" name="text" placeholder="Enter choice one" onchange="updateChoiceOne()"></textarea>
+        <textarea id="choiceTwo" rows="3" cols="60" name="text" placeholder="Enter choice two" onchange="updateChoiceTwo()"></textarea>
+        <textarea id="choiceThree" rows="3" cols="60" name="text" placeholder="Enter choice three" onchange="updateChoiceThree()"></textarea>
+        <textarea id="choiceFour" rows="3" cols="60" name="text" placeholder="Enter choice four" onchange="updateChoiceFour()"></textarea>
+        <textarea id="answer" rows="2" cols="60" name="text" placeholder="Enter correct choice number" onchange="updateAnswer()"></textarea>
+        <textarea id="explanation" rows="5" cols="60" name="text" placeholder="Enter an explanation" onchange="updateExplanation()"></textarea>
+        <a id="sendQuestion" class="button">Send Question</a>
+      </div>
+    </div>
+  </body>
+</html>
